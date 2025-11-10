@@ -7,7 +7,7 @@ class Env{
     constructor(){
         this.express = require("express");
         this.app = this.express();
-        const mask = '3000'
+        const mask = process.argv[2]
         this.port = process.env.PORT || mask;
         this.server = this.app.listen(this.port, function(){
           console.log('listening on port: ' + mask);

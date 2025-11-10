@@ -1,23 +1,23 @@
-### ENV
+### User ENV
 
 ```markdown
 # Update, package.json
 ncu -u
 
-# Use, yarn
+# Manages, yarn
 yarn install
 yarn upgrade
 ```
 
 ```markdown
-# start
+# Start, Server.
 node app.js 5678
 
 # http://localhost:5678
 ```
 
 ```markdown
-# Compile, typescript
+# Compiled with typescript
 tsc app.ts
 ```
 

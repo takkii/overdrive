@@ -34,10 +34,14 @@ yarn licenses v1.22.22
 │  │  ├─ URL: git://github.com/mde/filelist.git
 │  │  ├─ VendorName: Matthew Eernisse
 │  │  └─ VendorUrl: https://github.com/mde/filelist
-│  └─ jake@10.9.4
-│     ├─ URL: git://github.com/jakejs/jake.git
-│     ├─ VendorName: Matthew Eernisse
-│     └─ VendorUrl: http://fleegix.org
+│  ├─ jake@10.9.4
+│  │  ├─ URL: git://github.com/jakejs/jake.git
+│  │  ├─ VendorName: Matthew Eernisse
+│  │  └─ VendorUrl: http://fleegix.org
+│  └─ npm-check-updates@19.1.2
+│     ├─ URL: git+https://github.com/raineorshine/npm-check-updates.git
+│     ├─ VendorName: Tomas Junnonen
+│     └─ VendorUrl: https://github.com/raineorshine/npm-check-updates
 ├─ BSD-3-Clause
 │  └─ qs@6.14.0
 │     ├─ URL: https://github.com/ljharb/qs.git
@@ -285,7 +289,7 @@ yarn licenses v1.22.22
    └─ vary@1.1.2
       ├─ URL: https://github.com/jshttp/vary.git
       └─ VendorName: Douglas Christopher Wilson
-Done in 0.45s.
+Done in 0.28s.
 ```
 
 > ChangeLogs : 2025/11/10

@@ -84,6 +84,10 @@ yarn licenses v1.22.22
    │  └─ VendorUrl: https://github.com/juliangruber/balanced-match
    ├─ body-parser@2.2.0
    │  └─ URL: https://github.com/expressjs/body-parser.git
+   ├─ bootstrap@5.3.8
+   │  ├─ URL: git+https://github.com/twbs/bootstrap.git
+   │  ├─ VendorName: The Bootstrap Authors
+   │  └─ VendorUrl: https://getbootstrap.com/
    ├─ brace-expansion@2.0.2
    │  ├─ URL: git://github.com/juliangruber/brace-expansion.git
    │  ├─ VendorName: Julian Gruber
@@ -289,7 +293,7 @@ yarn licenses v1.22.22
    └─ vary@1.1.2
       ├─ URL: https://github.com/jshttp/vary.git
       └─ VendorName: Douglas Christopher Wilson
-Done in 0.28s.
+Done in 0.27s.
 ```
 
 > ChangeLogs : 2025/11/10

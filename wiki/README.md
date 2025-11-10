@@ -288,4 +288,4 @@ yarn licenses v1.22.22
 Done in 0.45s.
 ```
 
-> 更新履歴: 2025/11/10
+> ChangeLogs : 2025/11/10

@@ -1,0 +1,27 @@
+body {
+    font-family: "HackGen35 Console NF";
+    font-size: 1.2em;
+    padding: 0em 1em;
+    background-color: #f0f9ff;
+}
+
+.container {
+    background-color: white;
+    padding: 0.1em 1.2em 0.5em 1.2em;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: blue;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: blue;
+}
+
+p {
+    padding: 5px 10px;
+}

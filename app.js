@@ -10,6 +10,7 @@ var Env = /** @class */ (function () {
             console.log('listening on port: ' + mask);
         });
         this.app.use(this.favicon(this.path.join(__dirname, 'public', 'favicon.ico')));
+        this.app.use(this.express.static('public'));
         this.app.set('view engine', 'ejs');
     }
     Env.prototype.run = function () {

@@ -18,9 +18,11 @@
     "bootstrap": "^5.3.8",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "npm-check-updates": "^19.1.2"
+    "npm-check-updates": "^19.1.2",
+    "serve-favicon": "^2.5.1"
   },
   "devDependencies": {
+    "@types/express": "^5.0.5",
     "@types/node": "^24.10.0"
   }
 }

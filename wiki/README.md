@@ -72,9 +72,42 @@ yarn licenses v1.22.22
    ├─ @popperjs/core@2.11.8
    │  ├─ URL: https://github.com/popperjs/popper-core.git
    │  └─ VendorName: Federico Zivolo
+   ├─ @types/body-parser@1.19.6
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/body-parser
+   ├─ @types/connect@3.4.38
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/connect
+   ├─ @types/express-serve-static-core@5.1.0
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express-serve-static-core
+   ├─ @types/express@5.0.5
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express
+   ├─ @types/http-errors@2.0.5
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
+   ├─ @types/mime@1.3.5
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mime
    ├─ @types/node@24.10.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+   ├─ @types/qs@6.14.0
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/qs
+   ├─ @types/range-parser@1.2.7
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/range-parser
+   ├─ @types/send@0.17.6
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/send
+   ├─ @types/send@1.2.1
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/send
+   ├─ @types/serve-static@1.15.10
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/serve-static
    ├─ accepts@2.0.0
    │  └─ URL: https://github.com/jshttp/accepts.git
    ├─ async@3.2.6
@@ -161,6 +194,10 @@ yarn licenses v1.22.22
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ forwarded@0.2.0
    │  └─ URL: https://github.com/jshttp/forwarded.git
+   ├─ fresh@0.5.2
+   │  ├─ URL: https://github.com/jshttp/fresh.git
+   │  ├─ VendorName: TJ Holowaychuk
+   │  └─ VendorUrl: http://tjholowaychuk.com
    ├─ fresh@2.0.0
    │  ├─ URL: https://github.com/jshttp/fresh.git
    │  ├─ VendorName: TJ Holowaychuk
@@ -259,6 +296,9 @@ yarn licenses v1.22.22
    ├─ send@1.2.0
    │  ├─ URL: https://github.com/pillarjs/send.git
    │  └─ VendorName: TJ Holowaychuk
+   ├─ serve-favicon@2.5.1
+   │  ├─ URL: https://github.com/expressjs/serve-favicon.git
+   │  └─ VendorName: Douglas Christopher Wilson
    ├─ serve-static@2.2.0
    │  ├─ URL: https://github.com/expressjs/serve-static.git
    │  └─ VendorName: Douglas Christopher Wilson
@@ -296,7 +336,7 @@ yarn licenses v1.22.22
    └─ vary@1.1.2
       ├─ URL: https://github.com/jshttp/vary.git
       └─ VendorName: Douglas Christopher Wilson
-Done in 0.49s.
+Done in 0.36s.
 ```
 
 > ChangeLogs :  2025/11/11

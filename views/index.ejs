@@ -7,26 +7,80 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.esm.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: "HackGen35 Console NF";
+            font-size: 1.2em;
+            padding: 0em 1em;
+            background-color: #f0f9ff;
+        }
+
+        .container {
+            background-color: white;
+            padding: 0.1em 1.2em 0.5em 1.2em;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: white;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: normal;
+            color: white;
+        }
+
+        p {
+            padding: 5px 10px;
+        }
+
+        .alert {
+            color: white;
+            background-color: royalblue;
+            border: white 6px double;
+            padding: 25px 50px;
+            margin: 25px 0px;
+            border-radius: 0.5em;
+        }
+
+        .card {
+            border: gray 1px solid;
+            padding: 25px 50px;
+            margin: 25px 0px;
+            box-shadow: 5px 7px 5px darkgray;
+        }
+    </style>
 </head>
 <body>
-<div class="content">
+<div class="container">
     <div align="center">
+        <div class="card">
         <h1><a name="youtube"><p>
                     <a href="https://youtu.be/xRNDvD-qq1c?si=BKFNXwAC71uCUxp2">.netfileの構成、neovim/goneovim動作状況</a>
-                </p></a></h1>
+                </p></a></h1></div>
         <iframe width="530" height="315" src="https://www.youtube.com/embed/xRNDvD-qq1c?si=JX203WUrlWu095gi"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h3><p>2025/11/03、現時点で人気のある私のDTCL(Developer Test Completed Log)動画です。</p></h3>
-        <h3><p>Neovimの環境構築することを止めました(JetBrains製IDEに移行のため)。</p></h3>
-        <h3><p>
-                理由は、設定ファイルが多く調整が必要なこと。プラグインの入れ替えや仕様の変更に対応することの2点です。</p>
-        </h3>
-        <h3><p>年を重ねるごとに、時間の大切さを知り1日24時間があっという間に流れていくことは虚しさでもあります。</p>
-        </h3>
-        <p>Copyright &copy; 2025 Takayuki Kamiyama. </p>
+        <div class="alert">
+            <h3><p>2025/11/03、現時点で人気のある私の※1 DTCL動画です。</p></h3>
+            <h3><p>※1 略 Developer Test Completed Log</p></h3>
+            <h3><p>Neovimの環境構築することを止めました。</p></h3>
+            <h3><p>→ JetBrains製IDEに移行のためです。</p></h3>
+            <h3>
+                <p>「理由として挙げられる2点」</p>
+                <p>設定ファイルが多く調整が必要なこと。</p>
+                <p>プラグインの入れ替えや仕様の変更に対応すること</p>
+            </h3>
+            <h3>
+                <p>※ IDEsを使いましょう、時間が大事です。</p>
+            </h3>
+        </div>
+        <div class="card">
+            <p>Copyright &copy; 2025 Takayuki Kamiyama. </p>
+        </div>
     </div>
 </div>
 </body>

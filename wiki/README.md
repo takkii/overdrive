@@ -69,6 +69,9 @@ yarn licenses v1.22.22
 │     ├─ VendorName: Isaac Z. Schlueter
 │     └─ VendorUrl: https://github.com/npm/wrappy
 └─ MIT
+   ├─ @popperjs/core@2.11.8
+   │  ├─ URL: https://github.com/popperjs/popper-core.git
+   │  └─ VendorName: Federico Zivolo
    ├─ @types/node@24.10.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
@@ -293,7 +296,7 @@ yarn licenses v1.22.22
    └─ vary@1.1.2
       ├─ URL: https://github.com/jshttp/vary.git
       └─ VendorName: Douglas Christopher Wilson
-Done in 0.27s.
+Done in 0.49s.
 ```
 
-> ChangeLogs : 2025/11/10
+> ChangeLogs :  2025/11/11

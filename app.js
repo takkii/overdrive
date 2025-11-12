@@ -16,8 +16,9 @@ var Env = /** @class */ (function () {
         this.app.set('view engine', 'ejs');
     }
     Env.prototype.run = function () {
-        this.app.get("/", function (req, res, next) {
-            res.render("index", {});
+        this.app.get("/", function (req, res) {
+            res.render("index", { title: 'Overdrive' });
+            console.log(req.method + ": " + req.protocol);
         });
     };
     return Env;

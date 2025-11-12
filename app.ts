@@ -24,8 +24,9 @@ class Env {
     }
 
     run() {
-        this.app.get("/", function (req, res, next) {
-            res.render("index", {});
+        this.app.get("/", function (req, res) {
+            res.render("index", {title: 'Overdrive'});
+            console.log(req.method + ": " + req.protocol);
         });
     }
 }

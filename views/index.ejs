@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DTCL動画の紹介🎦</title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.esm.js"></script>
@@ -22,21 +22,21 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="alert">
-            <h3><p>2025/11/03、現時点で人気のある私の※1 DTCL動画です。</p></h3>
-            <h3><p>※1 略 Developer Test Completed Log</p></h3>
-            <h3><p>Neovim環境の構築することを止めました。</p></h3>
-            <h3><p>→ JetBrains製IDEsに移行のためです。</p></h3>
+            <h3><p><%= data %></p></h3>
+            <h3><p><%= data_full %></p></h3>
+            <h3><p><%= neovim %></p></h3>
+            <h3><p><%= jetbrains %></p></h3>
             <h3>
-                <p>「理由として挙げられる2点」</p>
-                <p>1. 設定ファイルが多く調整が必要なこと。</p>
-                <p>2. プラグインの入れ替えや仕様の変更に対応すること。</p>
+                <p><%= reason %></p>
+                <p><%= settings %></p>
+                <p><%= plugins %></p>
             </h3>
             <h3>
-                <p>※ IDEsを使いましょう、時間が大事です。</p>
+                <p><%= ides %></p>
             </h3>
         </div>
         <div class="card">
-            <p id="cpr"> Copyright &copy; 2025 Takayuki Kamiyama. </p>
+            <p id="cpr"><%= copy %></p>
             <script src="js/copyright.js"></script>
         </div>
     </div>

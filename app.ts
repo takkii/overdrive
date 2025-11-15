@@ -39,6 +39,7 @@ class Env {
             res.locals.plugins = data.plugins;
             res.locals.ides = data.ides;
             res.locals.copy = data.copyright;
+            res.locals.youtube = data.youtube;
             res.render("index");
             console.log(req.method + ": " + req.protocol);
         });

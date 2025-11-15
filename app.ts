@@ -1,3 +1,5 @@
+import {readFileSync} from 'node:fs';
+
 class Env {
     express: any;
     app: any;
@@ -25,7 +27,19 @@ class Env {
 
     run() {
         this.app.get("/", function (req, res) {
-            res.render("index", {title: 'Overdrive'});
+            const json_data = './json/data.json'
+            const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
+            res.locals.title = data.title;
+            res.locals.data = data.dtcl;
+            res.locals.data_full = data.dtcl_full;
+            res.locals.neovim = data.neovim;
+            res.locals.jetbrains = data.jetbrain;
+            res.locals.reason = data.reason;
+            res.locals.settings = data.settings;
+            res.locals.plugins = data.plugins;
+            res.locals.ides = data.ides;
+            res.locals.copy = data.copyright;
+            res.render("index");
             console.log(req.method + ": " + req.protocol);
         });
     }

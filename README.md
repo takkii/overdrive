@@ -4,5 +4,5 @@
   <h1><p>OverDrive Project.</p></h1>
   <img src="./images/startpage.gif">
   <h3><p>DTCL動画🎦の紹介。</p></h3>
-  <h3><p>シンプルなサーバーです。</p></h3>
+  <h3><p>シンプルなAPIです。</p></h3>
 </div>

@@ -1,14 +1,14 @@
 {
   "name": "overdrive",
-  "version": "1.0.2",
-  "description": "Use Express, Simple Server.",
+  "version": "1.0.3",
+  "description": "Use Express, Simple API.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "expressjs",
-    "server",
+    "api",
     "localhost"
   ],
   "author": "Takayuki Kamiyama",

@@ -15,6 +15,19 @@ node app.js 5678
 
 # Use WebStorm, Scoop/WSL Node.js/TypeScript
 Development Test Completed Check for API.
+
+# https://github.com/foreversd/forever?tab=readme-ov-file
+npm install -g forever
+
+# forever to run scripts continuously for Server.
+
+Windows not supported.
+
+# WSL2 side, Start.
+forever start app.js 5678
+
+# WSL2 side, Stop.
+forever stop app.js
 ```
 
 ```markdown

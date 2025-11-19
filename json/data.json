@@ -1,5 +1,5 @@
 {
-  "title": "DTCL動画の紹介\uD83C\uDFA6",
+  "title": "Welcome to overdrive project.",
   "dtcl": "2025/11/03、現時点で人気のある私の※1 DTCL動画です。",
   "dtcl_full": "※1 略 Developer Test Completed Log",
   "neovim": "Neovim環境の構築することを止めました。",
@@ -9,5 +9,11 @@
   "plugins": "2. プラグインの入れ替えや仕様の変更に対応すること。",
   "ides": "※ IDEsを使いましょう、時間が大事です。",
   "copyright": "Copyright &copy; 2025 Takayuki Kamiyama.",
-  "youtube": ".netfileの構成、neovim/goneovim動作状況"
+  "authors": "Copyright 2025 Takayuki Kamiyama.",
+  "youtube": ".netfileの構成、neovim/goneovim動作状況",
+  "under": "タイトル(上部)",
+  "spa": "Single Page Application",
+  "github": "GitHub/takkii",
+  "githubpages": "Piece of Ruby Shop",
+  "gist": "Gist Page"
 }

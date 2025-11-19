@@ -33,6 +33,11 @@ var Env = /** @class */ (function () {
             res.locals.ides = data.ides;
             res.locals.copy = data.copyright;
             res.locals.youtube = data.youtube;
+            res.locals.spa = data.spa;
+            res.locals.github = data.github;
+            res.locals.githubpages = data.githubpages;
+            res.locals.gist = data.gist;
+            res.locals.author = data.authors;
             res.render("index");
             console.log(req.method + ": " + req.protocol);
         });

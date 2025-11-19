@@ -9,7 +9,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 <main class="main">
     <div class="menu-wrapper">
         <input type="checkbox" id="menu-toggle" hidden>
@@ -58,45 +57,45 @@
             </div>
             <div class="card">
                 <h3>
-                    <a name="SPA"><p>SPA, Single Page Application.</p></a>
-                    <p>今回、単一のWebページでアプリケーションを構成する開発手法を用います。</p>
-                    <p>JavaScriptを使って、快適なユーザー体験（UX）の実現を目的にしています。</p>
-                    <p>※ 説明文は、わかりやすさのため英文と日本語を混在させています。</p>
+                    <a name="SPA"><p><%= spa_full %></p></a>
+                    <p><%= spa_dev %></p>
+                    <p><%= spa_js %></p>
+                    <p><%= spa_cm %></p>
                 </h3>
             </div>
             <div class="card">
-                <h3><a name="GitHub"><p><a href="https://github.com/takkii">GitHub/takkii</a></p></a></h3>
+                <h3><a name="GitHub"><p><a href="https://github.com/takkii"><%= github %></a></p></a></h3>
                 <p><img src="images/GitHub.gif" alt="GitHub profile"></p>
                 <div class="alert">
                     <h3>
-                        <p>OSS活動のポートフォリオです。</p>
-                        <p>公開するプロジェクトをまとめました。</p>
-                        <p>何年も使っているので、プロジェクト内の挙動はほぼ正確になっています。</p>
-                        <p>思い出の詰まったプロジェクトも多々あります。</p>
+                        <p><%= github_pf %></p>
+                        <p><%= github_op %></p>
+                        <p><%= github_us %></p>
+                        <p><%= github_me %></p>
                     </h3>
                 </div>
             </div>
             <div class="card">
-                <h3><a name="GitHubPage"><p><a href="https://takkii.github.io/">Piece of Ruby Shop</a></p></a></h3>
+                <h3><a name="GitHubPage"><p><a href="https://takkii.github.io/"><%= githubpages %></a></p></a></h3>
                 <p><img src="images/GitHubIO.gif" alt="GitHub pages"></p>
                 <div class="alert">
                     <h3>
-                        <p>自己紹介や経歴などを紹介するページです。</p>
-                        <p>jekyllを利用し、Dockerでビルドしています。</p>
-                        <p>スタイルシートやフォルダ構成などは自動で形成されます。</p>
-                        <p>フリーランス時代に作成したページでなんだか懐古感を想います。</p>
+                        <p><%= githubp_pf %></p>
+                        <p><%= githubp_bd %></p>
+                        <p><%= githubp_sy %></p>
+                        <p><%= githubp_old %></p>
                     </h3>
                 </div>
             </div>
             <div class="card">
-                <h3><a name="Gist"><p><a href="https://gist.github.com/takkii">Gist</a></p></a></h3>
+                <h3><a name="Gist"><p><a href="https://gist.github.com/takkii"><%= gist %></a></p></a></h3>
                 <p><img src="images/Gist.gif" alt="Gist pages"></p>
                 <div class="alert">
                     <h3>
-                        <p>Gistページです。</p>
-                        <p>公開したプロジェクトのアナウンスや記事をまとめています。</p>
-                        <p>以下省略が多いですが、形にすることで雰囲気を楽しめるようにしています。</p>
-                        <p>記事やアナウンスの整理整頓をしました。少数で管理しています。</p>
+                        <p><%= gist_p %></p>
+                        <p><%= gist_op %></p>
+                        <p><%= gist_sh %></p>
+                        <p><%= gist_mix %></p>
                     </h3>
                 </div>
             </div>
@@ -106,6 +105,5 @@
             </div>
         </div>
     </div>
-</body>
 </main>
 </html>

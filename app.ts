@@ -29,6 +29,7 @@ class Env {
         this.app.get("/", function (req, res) {
             const json_data = './json/data.json'
             const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
+            res.locals.name = data.name;
             res.locals.title = data.title;
             res.locals.data = data.dtcl;
             res.locals.data_full = data.dtcl_full;

@@ -22,6 +22,7 @@ var Env = /** @class */ (function () {
         this.app.get("/", function (req, res) {
             var json_data = './json/data.json';
             var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
+            res.locals.name = data.name;
             res.locals.title = data.title;
             res.locals.data = data.dtcl;
             res.locals.data_full = data.dtcl_full;

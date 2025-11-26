@@ -1,7 +1,7 @@
 {
   "name": "overdrive",
-  "version": "1.0.3",
-  "description": "Use Express, Simple API.",
+  "version": "1.0.3.1",
+  "description": "Use Express.js, Simple API.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,6 +1,39 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var node_fs_1 = require("node:fs");
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 var Env = /** @class */ (function () {
     function Env() {
         // https://expressjs.com/ja/5x/api.html
@@ -20,43 +53,68 @@ var Env = /** @class */ (function () {
     }
     Env.prototype.run = function () {
         this.app.get("/", function (req, res) {
-            var json_data = './json/data.json';
-            var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
-            res.locals.name = data.name;
-            res.locals.title = data.title;
-            res.locals.data = data.dtcl;
-            res.locals.data_full = data.dtcl_full;
-            res.locals.neovim = data.neovim;
-            res.locals.jetbrains = data.jetbrain;
-            res.locals.reason = data.reason;
-            res.locals.settings = data.settings;
-            res.locals.plugins = data.plugins;
-            res.locals.ides = data.ides;
-            res.locals.copy = data.copyright;
-            res.locals.youtube = data.youtube;
-            res.locals.spa = data.spa;
-            res.locals.github = data.github;
-            res.locals.github_pf = data.github_pf;
-            res.locals.github_op = data.github_op;
-            res.locals.github_us = data.github_us;
-            res.locals.github_me = data.github_me;
-            res.locals.githubpages = data.githubpages;
-            res.locals.githubp_pf = data.githubp_pf;
-            res.locals.githubp_bd = data.githubp_bd;
-            res.locals.githubp_sy = data.githubp_sy;
-            res.locals.githubp_old = data.githubp_old;
-            res.locals.gist = data.gist;
-            res.locals.gist_p = data.gist_p;
-            res.locals.gist_op = data.gist_op;
-            res.locals.gist_sh = data.gist_sh;
-            res.locals.gist_mix = data.gist_mix;
-            res.locals.author = data.authors;
-            res.locals.spa_full = data.spa_full;
-            res.locals.spa_dev = data.spa_dev;
-            res.locals.spa_js = data.spa_js;
-            res.locals.spa_cm = data.spa_cm;
-            res.render("index");
-            console.log(req.method + ": " + req.protocol);
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, fetch('http://localhost:1337/datas', {
+                                method: 'GET',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                }
+                            })
+                                .then(function (response) { return response.json(); })
+                                .then(function (data) {
+                                // 取得したデータを利用する処理
+                                var jsonString = JSON.stringify(data);
+                                // console.log(jsonString)
+                                var jsonObject = JSON.parse(jsonString);
+                                // console.log(jsonObject.name);
+                                res.locals.name = jsonObject.name;
+                                res.locals.title = jsonObject.title;
+                                res.locals.data = jsonObject.dtcl;
+                                res.locals.data_full = jsonObject.dtcl_full;
+                                res.locals.neovim = jsonObject.neovim;
+                                res.locals.jetbrains = jsonObject.jetbrain;
+                                res.locals.reason = jsonObject.reason;
+                                res.locals.settings = (jsonObject.settings).toString();
+                                res.locals.plugins = jsonObject.plugins;
+                                res.locals.ides = jsonObject.ides;
+                                res.locals.copy = jsonObject.copyright;
+                                res.locals.youtube = jsonObject.youtube;
+                                res.locals.spa = jsonObject.spa;
+                                res.locals.github = jsonObject.github;
+                                res.locals.github_pf = jsonObject.github_pf;
+                                res.locals.github_op = jsonObject.github_op;
+                                res.locals.github_us = jsonObject.github_us;
+                                res.locals.github_me = jsonObject.github_me;
+                                res.locals.githubpages = jsonObject.githubpages;
+                                res.locals.githubp_pf = jsonObject.githubp_pf;
+                                res.locals.githubp_bd = jsonObject.githubp_bd;
+                                res.locals.githubp_sy = jsonObject.githubp_sy;
+                                res.locals.githubp_old = jsonObject.githubp_old;
+                                res.locals.gist = jsonObject.gist;
+                                res.locals.gist_p = jsonObject.gist_p;
+                                res.locals.gist_op = jsonObject.gist_op;
+                                res.locals.gist_sh = jsonObject.gist_sh;
+                                res.locals.gist_mix = jsonObject.gist_mix;
+                                res.locals.author = jsonObject.authors;
+                                res.locals.spa_full = jsonObject.spa_full;
+                                res.locals.spa_dev = jsonObject.spa_dev;
+                                res.locals.spa_js = jsonObject.spa_js;
+                                res.locals.spa_cm = jsonObject.spa_cm;
+                            })
+                                .catch(function (error) {
+                                // エラーハンドリング
+                                console.error('エラー:', error);
+                            })];
+                        case 1:
+                            _a.sent();
+                            res.render("index");
+                            console.log(req.method + ": " + req.protocol);
+                            return [2 /*return*/];
+                    }
+                });
+            });
         });
     };
     return Env;

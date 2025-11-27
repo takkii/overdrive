@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <a name="name"><title><%= name %></title></a>
+    <a name="name"><title><%= locals.name %></title></a>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.esm.js"></script>
@@ -22,24 +22,24 @@
         <div class="overlay"></div>
         <nav class="menu">
             <ul>
-                <li><a href="#name"><p><%= title %></p></a></li>
-                <li><a href="#youtube"><p><%= youtube %></p></a></li>
-                <li><a href="#SPA"><p><%= spa %></p></a></li>
-                <li><a href="#GitHub"><p><%= github %></p></a></li>
-                <li><a href="#GitHubPage"><p><%= githubpages %></p></a></li>
-                <li><a href="#Gist"><p><%= gist %></p></a></li>
-                <li><a href="#copy"><p><%= author %></p></a></li>
+                <li><a href="#name"><p><%= locals.title %></p></a></li>
+                <li><a href="#youtube"><p><%= locals.youtube %></p></a></li>
+                <li><a href="#SPA"><p><%= locals.spa %></p></a></li>
+                <li><a href="#GitHub"><p><%= locals.github %></p></a></li>
+                <li><a href="#GitHubPage"><p><%= locals.githubpages %></p></a></li>
+                <li><a href="#Gist"><p><%= locals.gist %></p></a></li>
+                <li><a href="#copy"><p><%= locals.author %></p></a></li>
             </ul>
         </nav>
     </div>
     <div class="container">
         <div align="center">
             <div class="alert">
-                <h1><p><%= title %></p></h1>
+                <h1><p><%= locals.title %></p></h1>
             </div>
             <div class="card">
                 <h1><a name="youtube"><p>
-                            <a href="https://youtu.be/xRNDvD-qq1c?si=BKFNXwAC71uCUxp2"><%= youtube %></a>
+                            <a href="https://youtu.be/xRNDvD-qq1c?si=BKFNXwAC71uCUxp2"><%= locals.youtube %></a>
                         </p></a></h1>
                 <iframe width="530" height="315" src="https://www.youtube.com/embed/xRNDvD-qq1c?si=JX203WUrlWu095gi"
                         title="YouTube video player" frameborder="0"
@@ -47,23 +47,23 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="alert">
                     <h3>
-                        <p><%= data %></p>
-                        <p><%= data_full %></p>
-                        <p><%= neovim %></p>
-                        <p><%= jetbrains %></p>
-                        <p><%= reason %></p>
-                        <p><%= settings %></p>
-                        <p><%= plugins %></p>
-                        <p><%= ides %></p>
+                        <p><%= locals.data %></p>
+                        <p><%= locals.data_full %></p>
+                        <p><%= locals.neovim %></p>
+                        <p><%= locals.jetbrains %></p>
+                        <p><%= locals.reason %></p>
+                        <p><%= locals.settings %></p>
+                        <p><%= locals.plugins %></p>
+                        <p><%= locals.ides %></p>
                     </h3>
                 </div>
             </div>
             <div class="card">
                 <h3>
-                    <a name="SPA"><p><%= spa_full %></p></a>
-                    <p><%= spa_dev %></p>
-                    <p><%= spa_js %></p>
-                    <p><%= spa_cm %></p>
+                    <a name="SPA"><p><%= locals.spa_full %></p></a>
+                    <p><%= locals.spa_dev %></p>
+                    <p><%= locals.spa_js %></p>
+                    <p><%= locals.spa_cm %></p>
                 </h3>
             </div>
             <div class="card">
@@ -71,10 +71,10 @@
                 <p><img src="images/GitHub.gif" alt="GitHub profile"></p>
                 <div class="alert">
                     <h3>
-                        <p><%= github_pf %></p>
-                        <p><%= github_op %></p>
-                        <p><%= github_us %></p>
-                        <p><%= github_me %></p>
+                        <p><%= locals.github_pf %></p>
+                        <p><%= locals.github_op %></p>
+                        <p><%= locals.github_us %></p>
+                        <p><%= locals.github_me %></p>
                     </h3>
                 </div>
             </div>
@@ -83,10 +83,10 @@
                 <p><img src="images/GitHubIO.gif" alt="GitHub pages"></p>
                 <div class="alert">
                     <h3>
-                        <p><%= githubp_pf %></p>
-                        <p><%= githubp_bd %></p>
-                        <p><%= githubp_sy %></p>
-                        <p><%= githubp_old %></p>
+                        <p><%= locals.githubp_pf %></p>
+                        <p><%= locals.githubp_bd %></p>
+                        <p><%= locals.githubp_sy %></p>
+                        <p><%= locals.githubp_old %></p>
                     </h3>
                 </div>
             </div>
@@ -95,15 +95,15 @@
                 <p><img src="images/Gist.gif" alt="Gist pages"></p>
                 <div class="alert">
                     <h3>
-                        <p><%= gist_p %></p>
-                        <p><%= gist_op %></p>
-                        <p><%= gist_sh %></p>
-                        <p><%= gist_mix %></p>
+                        <p><%= locals.gist_p %></p>
+                        <p><%= locals.gist_op %></p>
+                        <p><%= locals.gist_sh %></p>
+                        <p><%= locals.gist_mix %></p>
                     </h3>
                 </div>
             </div>
             <div class="card">
-                <a name="copy"><p id="cpr"><%= copy %></p></a>
+                <a name="copy"><p id="cpr"><%= locals.copy %></p></a>
                 <script src="js/copyright.js"></script>
             </div>
         </div>

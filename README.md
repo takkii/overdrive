@@ -5,6 +5,6 @@
   <h1><p>OverDrive Project.</p></h1>
   <img src="./images/startpage.gif">
   <br /><br />
-  <h3><p>シンプルなAPIです。</p></h3>
+  <h3><p>typesプロジェクトと併用して使います。</p></h3>
   <br />
 </div>

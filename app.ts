@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 class Env {
     express: any;
     app: any;
@@ -25,11 +27,17 @@ class Env {
 
     run() {
         this.app.get("/", async function (req, res) {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => {
+                controller.abort();
+            }, 150);
+
             await fetch('http://localhost:1337/datas', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                signal: controller.signal
             })
                 .then(response => response.json())
                 .then(data => {

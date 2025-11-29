@@ -57,71 +57,75 @@ var Env = /** @class */ (function () {
     Env.prototype.run = function () {
         this.app.get("/", function (req, res) {
             return __awaiter(this, void 0, void 0, function () {
-                var controller, timeout;
+                var controller_1, timeoutId, response, data, jsonString, jsonObject, error_1;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
-                            controller = new AbortController();
-                            timeout = setTimeout(function () {
-                                controller.abort();
-                            }, 150);
+                            _a.trys.push([0, 3, 4, 5]);
+                            controller_1 = new AbortController();
+                            timeoutId = setTimeout(function () {
+                                controller_1.abort();
+                            }, 5000);
                             return [4 /*yield*/, (0, node_fetch_1.default)('http://localhost:1337/datas', {
+                                    signal: controller_1.signal,
                                     method: 'GET',
                                     headers: {
                                         'Content-Type': 'application/json'
-                                    },
-                                    signal: controller.signal
-                                })
-                                    .then(function (response) { return response.json(); })
-                                    .then(function (data) {
-                                    // 取得したデータを利用する処理
-                                    var jsonString = JSON.stringify(data);
-                                    // console.log(jsonString)
-                                    var jsonObject = JSON.parse(jsonString);
-                                    // console.log(jsonObject.name);
-                                    res.locals.name = jsonObject.name;
-                                    res.locals.title = jsonObject.title;
-                                    res.locals.data = jsonObject.dtcl;
-                                    res.locals.data_full = jsonObject.dtcl_full;
-                                    res.locals.neovim = jsonObject.neovim;
-                                    res.locals.jetbrains = jsonObject.jetbrain;
-                                    res.locals.reason = jsonObject.reason;
-                                    res.locals.settings = (jsonObject.settings).toString();
-                                    res.locals.plugins = jsonObject.plugins;
-                                    res.locals.ides = jsonObject.ides;
-                                    res.locals.copy = jsonObject.copyright;
-                                    res.locals.youtube = jsonObject.youtube;
-                                    res.locals.spa = jsonObject.spa;
-                                    res.locals.github = jsonObject.github;
-                                    res.locals.github_pf = jsonObject.github_pf;
-                                    res.locals.github_op = jsonObject.github_op;
-                                    res.locals.github_us = jsonObject.github_us;
-                                    res.locals.github_me = jsonObject.github_me;
-                                    res.locals.githubpages = jsonObject.githubpages;
-                                    res.locals.githubp_pf = jsonObject.githubp_pf;
-                                    res.locals.githubp_bd = jsonObject.githubp_bd;
-                                    res.locals.githubp_sy = jsonObject.githubp_sy;
-                                    res.locals.githubp_old = jsonObject.githubp_old;
-                                    res.locals.gist = jsonObject.gist;
-                                    res.locals.gist_p = jsonObject.gist_p;
-                                    res.locals.gist_op = jsonObject.gist_op;
-                                    res.locals.gist_sh = jsonObject.gist_sh;
-                                    res.locals.gist_mix = jsonObject.gist_mix;
-                                    res.locals.author = jsonObject.authors;
-                                    res.locals.spa_full = jsonObject.spa_full;
-                                    res.locals.spa_dev = jsonObject.spa_dev;
-                                    res.locals.spa_js = jsonObject.spa_js;
-                                    res.locals.spa_cm = jsonObject.spa_cm;
-                                })
-                                    .catch(function (error) {
-                                    // エラーハンドリング
-                                    console.error('エラー:', error);
+                                    }
                                 })];
                         case 1:
-                            _a.sent();
+                            response = _a.sent();
+                            if (!response.ok) {
+                                throw new Error("Warning, server status: ".concat(response.status));
+                            }
+                            return [4 /*yield*/, response.json()];
+                        case 2:
+                            data = _a.sent();
+                            jsonString = JSON.stringify(data);
+                            jsonObject = JSON.parse(jsonString);
+                            res.locals.name = jsonObject.name;
+                            res.locals.title = jsonObject.title;
+                            res.locals.data = jsonObject.dtcl;
+                            res.locals.data_full = jsonObject.dtcl_full;
+                            res.locals.neovim = jsonObject.neovim;
+                            res.locals.jetbrains = jsonObject.jetbrain;
+                            res.locals.reason = jsonObject.reason;
+                            res.locals.settings = (jsonObject.settings).toString();
+                            res.locals.plugins = jsonObject.plugins;
+                            res.locals.ides = jsonObject.ides;
+                            res.locals.copy = jsonObject.copyright;
+                            res.locals.youtube = jsonObject.youtube;
+                            res.locals.spa = jsonObject.spa;
+                            res.locals.github = jsonObject.github;
+                            res.locals.github_pf = jsonObject.github_pf;
+                            res.locals.github_op = jsonObject.github_op;
+                            res.locals.github_us = jsonObject.github_us;
+                            res.locals.github_me = jsonObject.github_me;
+                            res.locals.githubpages = jsonObject.githubpages;
+                            res.locals.githubp_pf = jsonObject.githubp_pf;
+                            res.locals.githubp_bd = jsonObject.githubp_bd;
+                            res.locals.githubp_sy = jsonObject.githubp_sy;
+                            res.locals.githubp_old = jsonObject.githubp_old;
+                            res.locals.gist = jsonObject.gist;
+                            res.locals.gist_p = jsonObject.gist_p;
+                            res.locals.gist_op = jsonObject.gist_op;
+                            res.locals.gist_sh = jsonObject.gist_sh;
+                            res.locals.gist_mix = jsonObject.gist_mix;
+                            res.locals.author = jsonObject.authors;
+                            res.locals.spa_full = jsonObject.spa_full;
+                            res.locals.spa_dev = jsonObject.spa_dev;
+                            res.locals.spa_js = jsonObject.spa_js;
+                            res.locals.spa_cm = jsonObject.spa_cm;
+                            return [3 /*break*/, 5];
+                        case 3:
+                            error_1 = _a.sent();
+                            console.error('Error: ', error_1);
+                            return [3 /*break*/, 5];
+                        case 4:
                             res.render("index");
                             console.log(req.method + ": " + req.protocol);
-                            return [2 /*return*/];
+                            return [7 /*endfinally*/];
+                        case 5: return [2 /*return*/];
                     }
                 });
             });

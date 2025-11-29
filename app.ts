@@ -27,65 +27,68 @@ class Env {
 
     run() {
         this.app.get("/", async function (req, res) {
-            const controller = new AbortController();
-            const timeout = setTimeout(() => {
-                controller.abort();
-            }, 150);
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => {
+                    controller.abort();
+                }, 5000);
 
-            await fetch('http://localhost:1337/datas', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                signal: controller.signal
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // 取得したデータを利用する処理
-                    const jsonString = JSON.stringify(data);
-                    // console.log(jsonString)
-                    const jsonObject = JSON.parse(jsonString);
-                    // console.log(jsonObject.name);
-                    res.locals.name = jsonObject.name;
-                    res.locals.title = jsonObject.title;
-                    res.locals.data = jsonObject.dtcl;
-                    res.locals.data_full = jsonObject.dtcl_full;
-                    res.locals.neovim = jsonObject.neovim;
-                    res.locals.jetbrains = jsonObject.jetbrain;
-                    res.locals.reason = jsonObject.reason;
-                    res.locals.settings = (jsonObject.settings).toString();
-                    res.locals.plugins = jsonObject.plugins;
-                    res.locals.ides = jsonObject.ides;
-                    res.locals.copy = jsonObject.copyright;
-                    res.locals.youtube = jsonObject.youtube;
-                    res.locals.spa = jsonObject.spa;
-                    res.locals.github = jsonObject.github;
-                    res.locals.github_pf = jsonObject.github_pf;
-                    res.locals.github_op = jsonObject.github_op;
-                    res.locals.github_us = jsonObject.github_us;
-                    res.locals.github_me = jsonObject.github_me;
-                    res.locals.githubpages = jsonObject.githubpages;
-                    res.locals.githubp_pf = jsonObject.githubp_pf;
-                    res.locals.githubp_bd = jsonObject.githubp_bd;
-                    res.locals.githubp_sy = jsonObject.githubp_sy;
-                    res.locals.githubp_old = jsonObject.githubp_old;
-                    res.locals.gist = jsonObject.gist;
-                    res.locals.gist_p = jsonObject.gist_p;
-                    res.locals.gist_op = jsonObject.gist_op;
-                    res.locals.gist_sh = jsonObject.gist_sh;
-                    res.locals.gist_mix = jsonObject.gist_mix;
-                    res.locals.author = jsonObject.authors;
-                    res.locals.spa_full = jsonObject.spa_full;
-                    res.locals.spa_dev = jsonObject.spa_dev;
-                    res.locals.spa_js = jsonObject.spa_js;
-                    res.locals.spa_cm = jsonObject.spa_cm;
+                const response = await fetch('http://localhost:1337/datas', {
+                    signal: controller.signal,
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
-                .catch(error => {
-                    // エラーハンドリング
-                    console.error('エラー:', error);
-                });
-            res.render("index");
-            console.log(req.method + ": " + req.protocol);
+
+                if (!response.ok) {
+                    throw new Error(`Warning, server status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+                const jsonString = JSON.stringify(data);
+                // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+                const jsonObject = JSON.parse(jsonString);
+                res.locals.name = jsonObject.name;
+                res.locals.title = jsonObject.title;
+                res.locals.data = jsonObject.dtcl;
+                res.locals.data_full = jsonObject.dtcl_full;
+                res.locals.neovim = jsonObject.neovim;
+                res.locals.jetbrains = jsonObject.jetbrain;
+                res.locals.reason = jsonObject.reason;
+                res.locals.settings = (jsonObject.settings).toString();
+                res.locals.plugins = jsonObject.plugins;
+                res.locals.ides = jsonObject.ides;
+                res.locals.copy = jsonObject.copyright;
+                res.locals.youtube = jsonObject.youtube;
+                res.locals.spa = jsonObject.spa;
+                res.locals.github = jsonObject.github;
+                res.locals.github_pf = jsonObject.github_pf;
+                res.locals.github_op = jsonObject.github_op;
+                res.locals.github_us = jsonObject.github_us;
+                res.locals.github_me = jsonObject.github_me;
+                res.locals.githubpages = jsonObject.githubpages;
+                res.locals.githubp_pf = jsonObject.githubp_pf;
+                res.locals.githubp_bd = jsonObject.githubp_bd;
+                res.locals.githubp_sy = jsonObject.githubp_sy;
+                res.locals.githubp_old = jsonObject.githubp_old;
+                res.locals.gist = jsonObject.gist;
+                res.locals.gist_p = jsonObject.gist_p;
+                res.locals.gist_op = jsonObject.gist_op;
+                res.locals.gist_sh = jsonObject.gist_sh;
+                res.locals.gist_mix = jsonObject.gist_mix;
+                res.locals.author = jsonObject.authors;
+                res.locals.spa_full = jsonObject.spa_full;
+                res.locals.spa_dev = jsonObject.spa_dev;
+                res.locals.spa_js = jsonObject.spa_js;
+                res.locals.spa_cm = jsonObject.spa_cm;
+            } catch (error) {
+                console.error('Error: ', error);
+            } finally {
+                res.render("index");
+                console.log(req.method + ": " + req.protocol);
+            }
         });
     }
 }

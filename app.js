@@ -40,7 +40,7 @@ var node_fetch_1 = require("node-fetch");
 var Env = /** @class */ (function () {
     function Env() {
         // https://expressjs.com/ja/5x/api.html
-        this.express = require("express");
+        this.express = require('express');
         this.favicon = require('serve-favicon');
         this.path = require('path');
         this.app = this.express();
@@ -55,7 +55,7 @@ var Env = /** @class */ (function () {
         this.app.set('view engine', 'ejs');
     }
     Env.prototype.run = function () {
-        this.app.get("/", function (req, res) {
+        this.app.get('/', function (req, res) {
             return __awaiter(this, void 0, void 0, function () {
                 var controller_1, timeoutId, response, data, jsonString, jsonObject, error_1;
                 return __generator(this, function (_a) {
@@ -122,7 +122,7 @@ var Env = /** @class */ (function () {
                             console.error('Error: ', error_1);
                             return [3 /*break*/, 5];
                         case 4:
-                            res.render("index");
+                            res.render('index');
                             console.log(req.method + ": " + req.protocol);
                             return [7 /*endfinally*/];
                         case 5: return [2 /*return*/];

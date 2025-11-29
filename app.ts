@@ -10,7 +10,7 @@ class Env {
 
     constructor() {
         // https://expressjs.com/ja/5x/api.html
-        this.express = require("express");
+        this.express = require('express');
         this.favicon = require('serve-favicon')
         this.path = require('path')
         this.app = this.express();
@@ -26,7 +26,7 @@ class Env {
     }
 
     run() {
-        this.app.get("/", async function (req, res) {
+        this.app.get('/', async function (req, res) {
             try {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => {
@@ -46,10 +46,9 @@ class Env {
                 }
 
                 const data = await response.json();
-                // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
                 const jsonString = JSON.stringify(data);
-                // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
                 const jsonObject = JSON.parse(jsonString);
+
                 res.locals.name = jsonObject.name;
                 res.locals.title = jsonObject.title;
                 res.locals.data = jsonObject.dtcl;
@@ -83,10 +82,11 @@ class Env {
                 res.locals.spa_dev = jsonObject.spa_dev;
                 res.locals.spa_js = jsonObject.spa_js;
                 res.locals.spa_cm = jsonObject.spa_cm;
+
             } catch (error) {
                 console.error('Error: ', error);
             } finally {
-                res.render("index");
+                res.render('index');
                 console.log(req.method + ": " + req.protocol);
             }
         });

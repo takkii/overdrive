@@ -41,11 +41,8 @@ class Env {
             })
                 .then(response => response.json())
                 .then(data => {
-                    // 取得したデータを利用する処理
                     const jsonString = JSON.stringify(data);
-                    // console.log(jsonString)
                     const jsonObject = JSON.parse(jsonString);
-                    // console.log(jsonObject.name);
                     res.locals.name = jsonObject.name;
                     res.locals.title = jsonObject.title;
                     res.locals.data = jsonObject.dtcl;

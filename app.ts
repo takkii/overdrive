@@ -28,16 +28,16 @@ class Env {
     run() {
         this.app.get("/", async function (req, res) {
             const controller = new AbortController();
-            const timeout = setTimeout(() => {
+            const timeoutId = setTimeout(() => {
                 controller.abort();
-            }, 150);
+            }, 5000);
 
             await fetch('http://localhost:1337/datas', {
+                signal: controller.signal,
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
-                },
-                signal: controller.signal
+                }
             })
                 .then(response => response.json())
                 .then(data => {
@@ -81,7 +81,6 @@ class Env {
                     res.locals.spa_cm = jsonObject.spa_cm;
                 })
                 .catch(error => {
-                    // エラーハンドリング
                     console.error('エラー:', error);
                 });
             res.render("index");

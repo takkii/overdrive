@@ -26,7 +26,8 @@ class Env {
     }
 
     run() {
-        this.app.get('/', async function (req, res) {
+        this.app.get('/', async function (req: { method: string; protocol: string; }, res: { locals: { name: any; title: any; data: any; data_full: any; neovim: any; jetbrains: any; reason: any; settings: any; plugins: any; ides: any; copy: any; youtube: any; spa: any; github: any; github_pf: any; github_op: any; github_us: any; github_me: any; githubpages: any; githubp_pf: any; githubp_bd: any; githubp_sy: any; githubp_old: any; gist: any; gist_p: any; gist_op: any; gist_sh: any; gist_mix: any; author: any; spa_full: any; spa_dev: any; spa_js: any; spa_cm: any; }; render: (arg0: string) => void; }) {
+
             try {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => {

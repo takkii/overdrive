@@ -355,7 +355,7 @@ yarn licenses v1.22.22
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ type-is@2.0.1
    │  └─ URL: https://github.com/jshttp/type-is.git
-   ├─ types-server@1.0.0
+   ├─ types-server@1.0.2
    │  └─ VendorName: Takayuki Kamiyama
    ├─ undici-types@7.16.0
    │  ├─ URL: git+https://github.com/nodejs/undici.git
@@ -370,7 +370,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.36s.
+Done in 0.44s.
 ```
 
 

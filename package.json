@@ -21,7 +21,7 @@
     "node-fetch": "^3.3.2",
     "npm-check-updates": "^19.1.2",
     "serve-favicon": "^2.5.1",
-    "types-server": "^1.0.1"
+    "types-server": "^1.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",

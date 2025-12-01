@@ -17,11 +17,11 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
+    "express": "^5.2.0",
     "node-fetch": "^3.3.2",
     "npm-check-updates": "^19.1.2",
     "serve-favicon": "^2.5.1",
-    "types-server": "^1.0.2"
+    "types-server": "^1.0.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",

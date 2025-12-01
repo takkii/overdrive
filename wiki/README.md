@@ -203,7 +203,7 @@ yarn licenses v1.22.22
    │  └─ URL: https://github.com/component/escape-html.git
    ├─ etag@1.8.1
    │  └─ URL: https://github.com/jshttp/etag.git
-   ├─ express@5.1.0
+   ├─ express@5.2.0
    │  ├─ URL: https://github.com/expressjs/express.git
    │  ├─ VendorName: TJ Holowaychuk
    │  └─ VendorUrl: https://expressjs.com/
@@ -211,7 +211,7 @@ yarn licenses v1.22.22
    │  ├─ URL: https://github.com/node-fetch/fetch-blob.git
    │  ├─ VendorName: Jimmy Wärting
    │  └─ VendorUrl: https://github.com/node-fetch/fetch-blob#readme
-   ├─ finalhandler@2.1.0
+   ├─ finalhandler@2.1.1
    │  ├─ URL: https://github.com/pillarjs/finalhandler.git
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ formdata-polyfill@4.0.10
@@ -355,7 +355,8 @@ yarn licenses v1.22.22
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ type-is@2.0.1
    │  └─ URL: https://github.com/jshttp/type-is.git
-   ├─ types-server@1.0.2
+   ├─ types-server@1.0.3
+   │  ├─ URL: https://github.com/takkii/typeserver.git
    │  └─ VendorName: Takayuki Kamiyama
    ├─ undici-types@7.16.0
    │  ├─ URL: git+https://github.com/nodejs/undici.git
@@ -370,8 +371,8 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.44s.
+Done in 0.34s.
 ```
 
 
-> ChangeLogs :  2025/12/01
+> ChangeLogs :  2025/12/02

@@ -668,10 +668,10 @@ type-is@^2.0.1:
     media-typer "^1.1.0"
     mime-types "^3.0.0"
 
-types-server@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/types-server/-/types-server-1.0.1.tgz#090d8501c98702d2001856f267a2da4d120e8b8e"
-  integrity sha512-G0NzAVEq9EtaY4x4i1llO3lOr8/UzQn3d5MoBQ3u930tTWOihvwLKehaSDHaxzfNQyDALOZ6hmbsrShUY9emEA==
+types-server@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/types-server/-/types-server-1.0.2.tgz#fee943fd34cfd9b9b6061a27a8325c7f973de0b2"
+  integrity sha512-6h4m6D4osvs+phdaFDU2ggCe4Wc4tNsPurc5HTeeNymfr8qMWozL0E+wUAs/7tPgFiJQ6vUL+dYSvi10qGEU/Q==
 
 undici-types@~7.16.0:
   version "7.16.0"

@@ -668,6 +668,11 @@ type-is@^2.0.1:
     media-typer "^1.1.0"
     mime-types "^3.0.0"
 
+types-server@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/types-server/-/types-server-1.0.0.tgz#b1121c04527da28f920c9a1953a88fc28f9e9178"
+  integrity sha512-9NFNmLwVMvKBflIceVwoJ1gpBh9x8yiB34/RdrKqC/Th8xq+FUGZ+hoLFktWmE8jlDDi5se+tvDc9NGtWXqYFA==
+
 undici-types@~7.16.0:
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"

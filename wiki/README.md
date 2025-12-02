@@ -95,15 +95,12 @@ yarn licenses v1.22.22
    ├─ @types/express-serve-static-core@5.1.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express-serve-static-core
-   ├─ @types/express@5.0.5
+   ├─ @types/express@5.0.6
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/mime@1.3.5
-   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
-   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mime
    ├─ @types/node@24.10.1
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
@@ -113,13 +110,10 @@ yarn licenses v1.22.22
    ├─ @types/range-parser@1.2.7
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/range-parser
-   ├─ @types/send@0.17.6
-   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
-   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/send
    ├─ @types/send@1.2.1
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/send
-   ├─ @types/serve-static@1.15.10
+   ├─ @types/serve-static@2.2.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/serve-static
    ├─ accepts@2.0.0
@@ -203,7 +197,7 @@ yarn licenses v1.22.22
    │  └─ URL: https://github.com/component/escape-html.git
    ├─ etag@1.8.1
    │  └─ URL: https://github.com/jshttp/etag.git
-   ├─ express@5.2.0
+   ├─ express@5.2.1
    │  ├─ URL: https://github.com/expressjs/express.git
    │  ├─ VendorName: TJ Holowaychuk
    │  └─ VendorUrl: https://expressjs.com/
@@ -355,7 +349,7 @@ yarn licenses v1.22.22
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ type-is@2.0.1
    │  └─ URL: https://github.com/jshttp/type-is.git
-   ├─ types-server@1.0.3
+   ├─ types-server@1.0.4
    │  ├─ URL: https://github.com/takkii/typeserver.git
    │  └─ VendorName: Takayuki Kamiyama
    ├─ undici-types@7.16.0

@@ -33,7 +33,14 @@ forever stop app.js
 ```markdown
 # Compiled with typescript
 tsc app.ts
+
+# Use, nyasocom_yon
+git clone git@github.com:takkii/nyasocom_yon.git
+
+※ Please nyasocom_yon README.
 ```
+
+[nyasocom_yon](https://github.com/takkii/nyasocom_yon) | [README](https://github.com/takkii/nyasocom_yon/tree/main/wiki)
 
 > yarn licenses list
 

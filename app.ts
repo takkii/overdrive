@@ -34,7 +34,11 @@ class Env {
                     controller.abort();
                 }, 5000);
 
+                // typeserver
                 const response = await fetch('http://localhost:1337/datas', {
+
+                // nyasocon_yon
+                // const response = await fetch('http://localhost:3000/groups', {
                     signal: controller.signal,
                     method: 'GET',
                     headers: {
@@ -48,7 +52,13 @@ class Env {
 
                 const data = await response.json();
                 const jsonString = JSON.stringify(data);
+
+                // typeserver
                 const jsonObject = JSON.parse(jsonString);
+
+                // nyasocom_yon
+                // let remove_frame = jsonString.replace(/[[\]]/g, '');
+                // const jsonObject = JSON.parse(remove_frame);
 
                 res.locals.name = jsonObject.name;
                 res.locals.title = jsonObject.title;
@@ -57,7 +67,10 @@ class Env {
                 res.locals.neovim = jsonObject.neovim;
                 res.locals.jetbrains = jsonObject.jetbrain;
                 res.locals.reason = jsonObject.reason;
+                // typeserver
                 res.locals.settings = (jsonObject.settings).toString();
+                // nyasocom_yon
+                // res.locals.settings = (jsonObject.settings);
                 res.locals.plugins = jsonObject.plugins;
                 res.locals.ides = jsonObject.ides;
                 res.locals.copy = jsonObject.copyright;

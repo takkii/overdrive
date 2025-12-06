@@ -21,6 +21,7 @@ class Env {
         });
         // https://expressjs.com/ja/starter/static-files.html
         this.app.use(this.favicon(this.path.join(__dirname, 'public', 'favicon.ico')))
+        this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
         this.app.use(this.express.static('public'))
         this.app.set('view engine', 'ejs');
     }

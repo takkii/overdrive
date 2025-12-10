@@ -39,7 +39,7 @@ class Env {
                 const response = await fetch('http://localhost:1337/datas', {
 
                 // nyasocon_yon
-                // const response = await fetch('http://localhost:3000/groups', {
+                // const response = await fetch('http://localhost:3000/', {
                     signal: controller.signal,
                     method: 'GET',
                     headers: {
@@ -71,7 +71,7 @@ class Env {
                 // typeserver
                 res.locals.settings = (jsonObject.settings).toString();
                 // nyasocom_yon
-                // res.locals.settings = (jsonObject.settings);
+                // res.locals.settings = jsonObject.settings;
                 res.locals.plugins = jsonObject.plugins;
                 res.locals.ides = jsonObject.ides;
                 res.locals.copy = jsonObject.copyright;

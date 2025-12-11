@@ -46,10 +46,10 @@
   resolved "https://registry.yarnpkg.com/@types/http-errors/-/http-errors-2.0.5.tgz#5b749ab2b16ba113423feb1a64a95dcd30398472"
   integrity sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==
 
-"@types/node@*", "@types/node@^24.10.1":
-  version "24.10.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.10.1.tgz#91e92182c93db8bd6224fca031e2370cef9a8f01"
-  integrity sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==
+"@types/node@*", "@types/node@^25.0.0":
+  version "25.0.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.0.tgz#c0e0022c3c7b41635c49322e6b3a0279fffa7d62"
+  integrity sha512-rl78HwuZlaDIUSeUKkmogkhebA+8K1Hy7tddZuJ3D0xV8pZSfsYGTsliGUol1JPzu9EKnTxPC4L1fiWouStRew==
   dependencies:
     undici-types "~7.16.0"
 
@@ -463,10 +463,10 @@ node-fetch@^3.3.2:
     fetch-blob "^3.1.4"
     formdata-polyfill "^4.0.10"
 
-npm-check-updates@^19.1.2:
-  version "19.1.2"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-19.1.2.tgz#8c11a739f8dc0fb5232bc1252fc2e9f65d6fc1da"
-  integrity sha512-FNeFCVgPOj0fz89hOpGtxP2rnnRHR7hD2E8qNU8SMWfkyDZXA/xpgjsL3UMLSo3F/K13QvJDnbxPngulNDDo/g==
+npm-check-updates@^19.2.0:
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-19.2.0.tgz#5dd11b505e11e6db602fe45c0ad6e8c0dcc94959"
+  integrity sha512-XSIuL0FNgzXPDZa4lje7+OwHjiyEt84qQm6QMsQRbixNY5EHEM9nhgOjxjlK9jIbN+ysvSqOV8DKNS0zydwbdg==
 
 object-inspect@^1.13.3:
   version "1.13.4"
@@ -655,10 +655,10 @@ type-is@^2.0.1:
     media-typer "^1.1.0"
     mime-types "^3.0.0"
 
-types-server@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/types-server/-/types-server-1.0.4.tgz#cb10889d7beb728a1c0e62b794dbf492b7181877"
-  integrity sha512-klXNyCe2ys0N7m4qU7D0VHE1DNomKN9Uqz2Du4CqJXKolZg6MMhfKkzcPwQ+DOCRjLlId3O6+fwPVo90tiW9LA==
+types-server@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/types-server/-/types-server-1.0.5.tgz#30f9bca0389e4c902a7838a3a72a73a6e6cd98b2"
+  integrity sha512-K2ywcypIBqUn4IoiQ5TuUVbLtsae+8dFeK/21HoRd6+VQISLiw9Sp+0eXvR39/ngcqM/xr+HvxPiSC4lOKzh3g==
 
 undici-types@~7.16.0:
   version "7.16.0"

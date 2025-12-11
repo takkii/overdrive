@@ -19,12 +19,12 @@
     "ejs": "^3.1.10",
     "express": "^5.2.1",
     "node-fetch": "^3.3.2",
-    "npm-check-updates": "^19.1.2",
+    "npm-check-updates": "^19.2.0",
     "serve-favicon": "^2.5.1",
-    "types-server": "^1.0.4"
+    "types-server": "^1.0.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^24.10.1"
+    "@types/node": "^25.0.0"
   }
 }

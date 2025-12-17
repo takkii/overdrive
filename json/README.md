@@ -5,10 +5,16 @@ npm install -g types-server
 
 types 1337
 
-# ./overdrive/json、コマンドプロンプトで実行
-curl -X POST -H "Content-Type: application/json" -d @data.json localhost:1337/datas
+# clone
+git clone git@github.com:takkii/overdrive.git
 
-cd json
+# templete, Needing sheltered-girl.
+heat branch overdrive takkii overdrive main
+
+cd overdrive/json
+
+# コマンドプロンプトで実行
+curl -X POST -H "Content-Type: application/json" -d @data.json localhost:1337/datas
 
 bundle update
 

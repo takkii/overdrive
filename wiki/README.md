@@ -10,29 +10,35 @@ yarn upgrade
 ```
 
 ```markdown
-# Start, http://localhost:5678
-node app.js 5678
+# http://localhost:1337
+npm install -g types-server
+types 1337
 
-# Use WebStorm, Scoop/WSL Node.js/TypeScript
-Development Test Completed Check for API.
+# Terminal, new Tab or Window.
+
+# Move to Project.
+cd overdrive/json
+
+# TypeScript compile && Node.js run
+tsc collect.ts && node collect.js
+
+# Compiled with typescript.
+tsc app.ts
+
+# Start, http://localhost
+node app.js 80
 
 # https://github.com/foreversd/forever?tab=readme-ov-file
 npm install -g forever
 
-# forever to run scripts continuously for Server.
+# VPS, Start.
+forever start app.js 80
 
-Windows not supported.
-
-# WSL2 side, Start.
-forever start app.js 5678
-
-# WSL2 side, Stop.
+# VPS, Stop.
 forever stop app.js
 ```
 
-```markdown
-
-```
+##### ※ 単語があるかないか検索🔎→あるとき、画面上部に移動します。ないとき、「見つかりませんでした。」が表示されます。
 
 > yarn licenses list
 
@@ -100,7 +106,7 @@ yarn licenses v1.22.22
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.0.0
+   ├─ @types/node@25.0.3
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -249,7 +255,7 @@ yarn licenses v1.22.22
    │  ├─ URL: https://github.com/jshttp/http-errors.git
    │  ├─ VendorName: Jonathan Ong
    │  └─ VendorUrl: http://jongleberry.com
-   ├─ iconv-lite@0.7.0
+   ├─ iconv-lite@0.7.1
    │  ├─ URL: https://github.com/pillarjs/iconv-lite.git
    │  ├─ VendorName: Alexander Shtuchkin
    │  └─ VendorUrl: https://github.com/pillarjs/iconv-lite
@@ -316,13 +322,13 @@ yarn licenses v1.22.22
    │  ├─ URL: git+https://github.com/ChALkeR/safer-buffer.git
    │  ├─ VendorName: Nikita Skovoroda
    │  └─ VendorUrl: https://github.com/ChALkeR
-   ├─ send@1.2.0
+   ├─ send@1.2.1
    │  ├─ URL: https://github.com/pillarjs/send.git
    │  └─ VendorName: TJ Holowaychuk
    ├─ serve-favicon@2.5.1
    │  ├─ URL: https://github.com/expressjs/serve-favicon.git
    │  └─ VendorName: Douglas Christopher Wilson
-   ├─ serve-static@2.2.0
+   ├─ serve-static@2.2.1
    │  ├─ URL: https://github.com/expressjs/serve-static.git
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ side-channel-list@1.0.0
@@ -365,7 +371,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.34s.
+Done in 0.56s.
 ```
 
-> ChangeLogs: 2025/12/11
+> ChangeLogs: 2025/12/23

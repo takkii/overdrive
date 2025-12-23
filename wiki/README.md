@@ -22,6 +22,9 @@ cd overdrive/json
 # TypeScript compile && Node.js run
 tsc collect.ts && node collect.js
 
+# Node.js run
+node collect.js
+
 # Compiled with typescript.
 tsc app.ts
 
@@ -374,4 +377,4 @@ yarn licenses v1.22.22
 Done in 0.56s.
 ```
 
-> ChangeLogs: 2025/12/23
+> ChangeLogs: 2025/12/24

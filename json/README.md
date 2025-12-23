@@ -5,20 +5,19 @@ npm install -g types-server
 
 types 1337
 
-# clone
+# 複製
 git clone git@github.com:takkii/overdrive.git
 
-# templete, Needing sheltered-girl.
+# ひな形、 RubyGems/sheltered-girlが必要です。
 heat branch overdrive takkii overdrive main
 
 cd overdrive/json
 
-# コマンドプロンプトで実行
-curl -X POST -H "Content-Type: application/json" -d @data.json localhost:1337/datas
+# TypeScript コンパイル && Node.jsを実行します。
+tsc collect.ts && node collect.js
 
-bundle update
-
-ruby parse.rb
+# Node.jsを実行します。
+node collect.js
 ```
 
 > 実行結果
@@ -60,4 +59,4 @@ Gistページです。
 記事やアナウンスの整理整頓をしました。少数で管理しています。
 ```
 
-※ RESTful ServerをRubyから使ってみました。
+※ Javascript単体で、RESTful Serverを起動するように変更しました。

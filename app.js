@@ -68,8 +68,6 @@ var Env = /** @class */ (function () {
                                 controller_1.abort();
                             }, 5000);
                             return [4 /*yield*/, (0, node_fetch_1.default)('http://localhost:1337/datas', {
-                                    // nyasocon_yon
-                                    // const response = await fetch('http://localhost:3000/', {
                                     signal: controller_1.signal,
                                     method: 'GET',
                                     headers: {
@@ -86,9 +84,6 @@ var Env = /** @class */ (function () {
                             data = _a.sent();
                             jsonString = JSON.stringify(data);
                             jsonObject = JSON.parse(jsonString);
-                            // nyasocom_yon
-                            // let remove_frame = jsonString.replace(/[[\]]/g, '');
-                            // const jsonObject = JSON.parse(remove_frame);
                             res.locals.name = jsonObject.name;
                             res.locals.title = jsonObject.title;
                             res.locals.data = jsonObject.dtcl;
@@ -96,10 +91,7 @@ var Env = /** @class */ (function () {
                             res.locals.neovim = jsonObject.neovim;
                             res.locals.jetbrains = jsonObject.jetbrain;
                             res.locals.reason = jsonObject.reason;
-                            // typeserver
                             res.locals.settings = (jsonObject.settings).toString();
-                            // nyasocom_yon
-                            // res.locals.settings = jsonObject.settings;
                             res.locals.plugins = jsonObject.plugins;
                             res.locals.ides = jsonObject.ides;
                             res.locals.copy = jsonObject.copyright;

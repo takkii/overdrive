@@ -20,10 +20,10 @@ types 1337
 cd overdrive/json
 
 # TypeScript compile && Node.js run
-tsc collect.ts && node collect.js
+tsc toss.ts && node toss.js
 
 # Node.js run
-node collect.js
+node toss.js
 
 # Compiled with typescript.
 tsc app.ts

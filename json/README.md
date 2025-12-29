@@ -14,10 +14,10 @@ heat branch overdrive takkii overdrive main
 cd overdrive/json
 
 # TypeScript コンパイル && Node.jsを実行します。
-tsc collect.ts && node collect.js
+tsc toss.ts && node toss.js
 
 # Node.jsを実行します。
-node collect.js
+node toss.js
 ```
 
 ※ Javascriptで、RESTful Serverを操作するように変更しました。

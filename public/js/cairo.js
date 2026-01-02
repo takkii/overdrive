@@ -5,7 +5,7 @@
 
 $(function () {
     $('a[href^=#]').click(function () {
-        const speed = 400; // ミリ秒
+        const speed = 400; // millisecond
         let href = $(this).attr("href");
         const target = $(href === "#" || href === "" ? 'html' : href);
         $($.browser.safari ? 'body' : 'html').animate({

@@ -10,11 +10,13 @@ yarn upgrade
 ```
 
 ```markdown
-# http://localhost:1337
-npm install -g types-server
-types 1337
+# json-server starting ...
+git clone git@github.com:takkii/json-server.git
+npm install -g jn-server
+cd json-server/bin
+node jns
 
-# Terminal, new Tab or Window.
+# New Tab or Window.
 
 # Move to Project.
 cd overdrive/json

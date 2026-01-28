@@ -50,7 +50,7 @@ forever stop app.js
 ```javascript
 yarn licenses v1.22.22
 ├─ Apache-2.0
-│  ├─ ejs@3.1.10
+│  ├─ ejs@4.0.1
 │  │  ├─ URL: git://github.com/mde/ejs.git
 │  │  ├─ VendorName: Matthew Eernisse
 │  │  └─ VendorUrl: https://github.com/mde/ejs
@@ -62,12 +62,12 @@ yarn licenses v1.22.22
 │  │  ├─ URL: git://github.com/jakejs/jake.git
 │  │  ├─ VendorName: Matthew Eernisse
 │  │  └─ VendorUrl: http://fleegix.org
-│  └─ npm-check-updates@19.2.0
+│  └─ npm-check-updates@19.3.2
 │     ├─ URL: git+https://github.com/raineorshine/npm-check-updates.git
 │     ├─ VendorName: Tomas Junnonen
 │     └─ VendorUrl: https://github.com/raineorshine/npm-check-updates
 ├─ BSD-3-Clause
-│  └─ qs@6.14.0
+│  └─ qs@6.14.1
 │     ├─ URL: https://github.com/ljharb/qs.git
 │     └─ VendorUrl: https://github.com/ljharb/qs
 ├─ ISC
@@ -102,7 +102,7 @@ yarn licenses v1.22.22
    ├─ @types/connect@3.4.38
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/connect
-   ├─ @types/express-serve-static-core@5.1.0
+   ├─ @types/express-serve-static-core@5.1.1
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express-serve-static-core
    ├─ @types/express@5.0.6
@@ -111,7 +111,7 @@ yarn licenses v1.22.22
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.0.3
+   ├─ @types/node@25.0.10
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -136,7 +136,7 @@ yarn licenses v1.22.22
    │  ├─ URL: git://github.com/juliangruber/balanced-match.git
    │  ├─ VendorName: Julian Gruber
    │  └─ VendorUrl: https://github.com/juliangruber/balanced-match
-   ├─ body-parser@2.2.1
+   ├─ body-parser@2.2.2
    │  └─ URL: https://github.com/expressjs/body-parser.git
    ├─ bootstrap@5.3.8
    │  ├─ URL: git+https://github.com/twbs/bootstrap.git
@@ -260,7 +260,7 @@ yarn licenses v1.22.22
    │  ├─ URL: https://github.com/jshttp/http-errors.git
    │  ├─ VendorName: Jonathan Ong
    │  └─ VendorUrl: http://jongleberry.com
-   ├─ iconv-lite@0.7.1
+   ├─ iconv-lite@0.7.2
    │  ├─ URL: https://github.com/pillarjs/iconv-lite.git
    │  ├─ VendorName: Alexander Shtuchkin
    │  └─ VendorUrl: https://github.com/pillarjs/iconv-lite
@@ -270,6 +270,10 @@ yarn licenses v1.22.22
    ├─ is-promise@4.0.0
    │  ├─ URL: https://github.com/then/is-promise.git
    │  └─ VendorName: ForbesLindesay
+   ├─ jn-server@1.0.2
+   │  ├─ URL: https://github.com/takkii/json-server.git
+   │  ├─ VendorName: Takayuki Kamiyama
+   │  └─ VendorUrl: http://pieceof.shop/
    ├─ math-intrinsics@1.1.0
    │  ├─ URL: git+https://github.com/es-shims/math-intrinsics.git
    │  ├─ VendorName: Jordan Harband
@@ -359,10 +363,6 @@ yarn licenses v1.22.22
    │  └─ VendorName: Douglas Christopher Wilson
    ├─ type-is@2.0.1
    │  └─ URL: https://github.com/jshttp/type-is.git
-   ├─ types-server@1.0.5
-   │  ├─ URL: https://github.com/takkii/typeserver.git
-   │  ├─ VendorName: Takayuki Kamiyama
-   │  └─ VendorUrl: http://pieceof.shop/
    ├─ undici-types@7.16.0
    │  ├─ URL: git+https://github.com/nodejs/undici.git
    │  └─ VendorUrl: https://undici.nodejs.org/
@@ -376,7 +376,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.56s.
+Done in 0.30s.
 ```
 
-> ChangeLogs: 2025/12/24
+> ChangeLogs: 2026/01/28

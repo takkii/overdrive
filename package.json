@@ -16,15 +16,15 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
-    "ejs": "^3.1.10",
+    "ejs": "^4.0.1",
     "express": "^5.2.1",
     "node-fetch": "^3.3.2",
-    "npm-check-updates": "^19.2.0",
+    "npm-check-updates": "^19.3.2",
     "serve-favicon": "^2.5.1",
-    "types-server": "^1.0.5"
+    "jn-server": "^1.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^25.0.3"
+    "@types/node": "^25.0.10"
   }
 }

@@ -5,6 +5,6 @@
   <h1><p><a href="https://youtu.be/fap4OGIeaW4?si=yBbFnSp0Pk_4cXBc">OverDrive</a> Project.</p></h1>
   <img src="./images/startpage.gif">
   <br /><br />
-  <h3><p>VPS稼働中です。</p></h3>
+  <h3><p>localhost専用</p></h3>
   <br />
 </div>

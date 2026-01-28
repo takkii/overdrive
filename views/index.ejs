@@ -28,7 +28,13 @@
                 <li><a href="#GitHub"><p><%= locals.github %></p></a></li>
                 <li><a href="#GitHubPage"><p><%= locals.githubpages %></p></a></li>
                 <li><a href="#Gist"><p><%= locals.gist %></p></a></li>
-                <li><a href="#copy"><p><%= locals.author %></p></a></li>
+                <li><a href="#copy"><p id="crr"><%= locals.author %></p></a></li>
+                <script>
+                    OneDay = new Date();
+                    OneYear = this.OneDay.getFullYear();
+                    const crr_2025 = document.getElementById("crr");
+                    crr_2025.innerHTML = "Copyright &copy; 2025-" + OneYear + " Takayuki Kamiyama.";
+                </script>
             </ul>
         </nav>
     </div>

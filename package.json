@@ -1,14 +1,14 @@
 {
   "name": "overdrive",
   "version": "1.0.3.1",
-  "description": "Use Express.js, Simple API.",
+  "description": "Frontend Side for overdrive.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "expressjs",
-    "api",
+    "frontend",
     "localhost"
   ],
   "author": "Takayuki Kamiyama",
@@ -18,13 +18,13 @@
     "bootstrap": "^5.3.8",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
+    "jn-server": "^1.0.3",
     "node-fetch": "^3.3.2",
     "npm-check-updates": "^19.3.2",
-    "serve-favicon": "^2.5.1",
-    "jn-server": "^1.0.2"
+    "serve-favicon": "^2.5.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^25.0.10"
+    "@types/node": "^25.1.0"
   }
 }

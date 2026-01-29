@@ -405,10 +405,10 @@ jake@^10.9.1:
     filelist "^1.0.4"
     picocolors "^1.1.1"
 
-jn-server@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/jn-server/-/jn-server-1.0.3.tgz#5d521915902f3bb3450f68345fc558624450b4ba"
-  integrity sha512-tAQRPvWID5w0HwONA4WiFFl1SGUnsQf9KC+HiaaUeiHWA2mv2jvfeVtj3XGvN5ArCwSD7j3Rfs9nNz2zbDfBxg==
+jn-server@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/jn-server/-/jn-server-1.0.4.tgz#161e31b22e320cd891d1798e7847e6c272d675ba"
+  integrity sha512-bV00XXDGZ5K74kNmpSQS0+sHCvxjCdMJ74krzFhYEGph9R1a+dfEE8efHzZI5++NyKOmBYkCgYpQ0kI6GpOTXA==
 
 math-intrinsics@^1.1.0:
   version "1.1.0"

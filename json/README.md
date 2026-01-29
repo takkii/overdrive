@@ -1,9 +1,13 @@
 ### 環境構築
 
 ```markdown
-npm install -g types-server
+# 複製
+git clone git@github.com:takkii/json-server.git
 
-types 1337
+# バックアップ
+npm install -g jn-server
+cd json-server/bin
+node jns.js
 
 # 複製
 git clone git@github.com:takkii/overdrive.git
@@ -20,4 +24,4 @@ tsc toss.ts && node toss.js
 node toss.js
 ```
 
-※ Javascriptで、RESTful Serverを操作するように変更しました。
+※ Javascriptで、JSON RESTful Serverを操作するように変更しました。

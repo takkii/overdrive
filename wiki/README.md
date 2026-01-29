@@ -51,6 +51,7 @@ forever stop app.js
 
 ```javascript
 yarn licenses v1.22.22
+warning ..\..\package.json: No license field
 ├─ Apache-2.0
 │  ├─ ejs@4.0.1
 │  │  ├─ URL: git://github.com/mde/ejs.git
@@ -113,7 +114,7 @@ yarn licenses v1.22.22
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.0.10
+   ├─ @types/node@25.1.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -272,7 +273,7 @@ yarn licenses v1.22.22
    ├─ is-promise@4.0.0
    │  ├─ URL: https://github.com/then/is-promise.git
    │  └─ VendorName: ForbesLindesay
-   ├─ jn-server@1.0.2
+   ├─ jn-server@1.0.3
    │  ├─ URL: https://github.com/takkii/json-server.git
    │  ├─ VendorName: Takayuki Kamiyama
    │  └─ VendorUrl: http://pieceof.shop/
@@ -378,7 +379,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.30s.
+Done in 0.29s.
 ```
 
 > ChangeLogs: 2026/01/28

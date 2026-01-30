@@ -34,6 +34,8 @@ class Env {
         this.create_server = http.createServer(this.app, function (req: { connection: { remoteAddress: any; }; }, res: { writeHead: (arg0: number, arg1: { 'Content-Type': string; }) => void; write: (arg0: any) => any; end: () => void; }) {
             res.writeHead(200, {'Content-Type': 'text/plain'});
             logger.debug(res.write(req.connection.remoteAddress));
+            // @ts-ignore
+            logger.debug(res.write(req.headers['x-forwarded-for']));
             res.end();
         });
         this.server = this.create_server.listen(this.port, function () {

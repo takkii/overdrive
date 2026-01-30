@@ -47,27 +47,7 @@ var Env = /** @class */ (function () {
         this.app = this.express();
         var mask = process.argv[2];
         this.port = process.env.PORT || mask;
-        var http = require("http");
-        log4js.configure({
-            appenders: {
-                overdrive: {
-                    type: "file", filename: "./logs/overdrive.log",
-                    maxLogSize: 10 * 1024 * 1024,
-                    backups: 5, compress: true
-                }
-            },
-            categories: { default: { appenders: ["overdrive"], level: "error" } },
-        });
-        var logger = log4js.getLogger();
-        logger.level = "debug";
-        this.create_server = http.createServer(this.app, function (req, res) {
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            logger.debug(res.write(req.connection.remoteAddress));
-            // @ts-ignore
-            logger.debug(res.write(req.headers['x-forwarded-for']));
-            res.end();
-        });
-        this.server = this.create_server.listen(this.port, function () {
+        this.server = this.app.listen(this.port, function () {
             console.log('listening on port: ' + mask);
         });
         // https://expressjs.com/ja/starter/static-files.html
@@ -75,6 +55,28 @@ var Env = /** @class */ (function () {
         this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
         this.app.use(this.express.static('public'));
         this.app.set('view engine', 'ejs');
+        // @ts-ignore
+        this.app.use(function (req, res, next) {
+            log4js.configure({
+                appenders: {
+                    overdrive: {
+                        type: "file", filename: "./logs/overdrive.log",
+                        maxLogSize: 10 * 1024 * 1024,
+                        backups: 5, compress: true
+                    }
+                },
+                categories: { default: { appenders: ["overdrive"], level: "error" } },
+            });
+            var logger = log4js.getLogger();
+            logger.level = "debug";
+            // const clientIP = req.connection.remoteAddress;
+            var clientIP = req.ip;
+            var splittedAddress = "".concat(clientIP).split(':');
+            var ipAddress = splittedAddress[splittedAddress.length - 1];
+            // @ts-ignore
+            logger.debug("Client IP: ".concat(ipAddress));
+            next();
+        });
     }
     Env.prototype.run = function () {
         this.app.get('/', function (req, res) {

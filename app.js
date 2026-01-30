@@ -77,26 +77,11 @@ var Env = /** @class */ (function () {
     Env.prototype.run = function () {
         this.app.get('/', function (req, res) {
             return __awaiter(this, void 0, void 0, function () {
-                var logger, ip, ip_address, controller_1, timeoutId, platform, response, data, jsonString, jsonObject, response, data, jsonString, jsonObject, response, data, jsonString, jsonObject, error_1;
+                var controller_1, timeoutId, platform, response, data, jsonString, jsonObject, response, data, jsonString, jsonObject, response, data, jsonString, jsonObject, error_1;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
                             _a.trys.push([0, 10, 11, 12]);
-                            log4js.configure({
-                                appenders: {
-                                    overdrive: {
-                                        type: "file", filename: "./logs/overdrive.log",
-                                        maxLogSize: 10 * 1024 * 1024,
-                                        backups: 5, compress: true
-                                    }
-                                },
-                                categories: { default: { appenders: ["overdrive"], level: "error" } },
-                            });
-                            logger = log4js.getLogger();
-                            logger.level = "debug";
-                            ip = require('ip');
-                            ip_address = ip.address();
-                            logger.debug("IP address: ".concat(ip_address));
                             controller_1 = new AbortController();
                             timeoutId = setTimeout(function () {
                                 controller_1.abort();

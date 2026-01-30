@@ -18,27 +18,7 @@ class Env {
         this.app = this.express();
         const mask = process.argv[2]
         this.port = process.env.PORT || mask;
-        const http = require("http");
-        log4js.configure({
-            appenders: {
-                overdrive: {
-                    type: "file", filename: "./logs/overdrive.log",
-                    maxLogSize: 10 * 1024 * 1024,
-                    backups: 5, compress: true
-                }
-            },
-            categories: {default: {appenders: ["overdrive"], level: "error"}},
-        });
-        const logger = log4js.getLogger();
-        logger.level = "debug";
-        this.create_server = http.createServer(this.app, function (req: { connection: { remoteAddress: any; }; }, res: { writeHead: (arg0: number, arg1: { 'Content-Type': string; }) => void; write: (arg0: any) => any; end: () => void; }) {
-            res.writeHead(200, {'Content-Type': 'text/plain'});
-            logger.debug(res.write(req.connection.remoteAddress));
-            // @ts-ignore
-            logger.debug(res.write(req.headers['x-forwarded-for']));
-            res.end();
-        });
-        this.server = this.create_server.listen(this.port, function () {
+        this.server = this.app.listen(this.port, function () {
             console.log('listening on port: ' + mask);
         });
         // https://expressjs.com/ja/starter/static-files.html
@@ -46,6 +26,30 @@ class Env {
         this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
         this.app.use(this.express.static('public'))
         this.app.set('view engine', 'ejs');
+        // @ts-ignore
+        this.app.use((req, res, next) => {
+            log4js.configure({
+                appenders: {
+                    overdrive: {
+                        type: "file", filename: "./logs/overdrive.log",
+                        maxLogSize: 10 * 1024 * 1024,
+                        backups: 5, compress: true
+                    }
+                },
+                categories: {default: {appenders: ["overdrive"], level: "error"}},
+            });
+            const logger = log4js.getLogger();
+            logger.level = "debug";
+
+            // const clientIP = req.connection.remoteAddress;
+            const clientIP = req.ip;
+            const splittedAddress = `${clientIP}`.split(':');
+            const ipAddress = splittedAddress[splittedAddress.length - 1];
+
+            // @ts-ignore
+            logger.debug(`Client IP: ${ipAddress}`);
+            next();
+        });
     }
 
     run() {
@@ -89,22 +93,6 @@ class Env {
         }) {
 
             try {
-                // log4js.configure({
-                //     appenders: {
-                //         overdrive: {
-                //             type: "file", filename: "./logs/overdrive.log",
-                //             maxLogSize: 10 * 1024 * 1024,
-                //             backups: 5, compress: true
-                //         }
-                //     },
-                //     categories: {default: {appenders: ["overdrive"], level: "error"}},
-                // });
-                // const logger = log4js.getLogger();
-                // logger.level = "debug";
-                // const ip = require('ip');
-                // const ip_address = ip.address();
-                // logger.debug(`IP address: ${ip_address}`);
-
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => {
                     controller.abort();

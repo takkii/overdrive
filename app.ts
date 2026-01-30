@@ -87,21 +87,21 @@ class Env {
         }) {
 
             try {
-                log4js.configure({
-                    appenders: {
-                        overdrive: {
-                            type: "file", filename: "./logs/overdrive.log",
-                            maxLogSize: 10 * 1024 * 1024,
-                            backups: 5, compress: true
-                        }
-                    },
-                    categories: {default: {appenders: ["overdrive"], level: "error"}},
-                });
-                const logger = log4js.getLogger();
-                logger.level = "debug";
-                const ip = require('ip');
-                const ip_address = ip.address();
-                logger.debug(`IP address: ${ip_address}`);
+                // log4js.configure({
+                //     appenders: {
+                //         overdrive: {
+                //             type: "file", filename: "./logs/overdrive.log",
+                //             maxLogSize: 10 * 1024 * 1024,
+                //             backups: 5, compress: true
+                //         }
+                //     },
+                //     categories: {default: {appenders: ["overdrive"], level: "error"}},
+                // });
+                // const logger = log4js.getLogger();
+                // logger.level = "debug";
+                // const ip = require('ip');
+                // const ip_address = ip.address();
+                // logger.debug(`IP address: ${ip_address}`);
 
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => {

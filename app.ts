@@ -8,6 +8,7 @@ class Env {
     port: any;
     favicon: any;
     path: any;
+    create_server: any;
 
     constructor() {
         // https://expressjs.com/ja/5x/api.html
@@ -17,7 +18,25 @@ class Env {
         this.app = this.express();
         const mask = process.argv[2]
         this.port = process.env.PORT || mask;
-        this.server = this.app.listen(this.port, function () {
+        const http = require("http");
+        log4js.configure({
+            appenders: {
+                overdrive: {
+                    type: "file", filename: "./logs/overdrive.log",
+                    maxLogSize: 10 * 1024 * 1024,
+                    backups: 5, compress: true
+                }
+            },
+            categories: {default: {appenders: ["overdrive"], level: "error"}},
+        });
+        const logger = log4js.getLogger();
+        logger.level = "debug";
+        this.create_server = http.createServer(this.app, function (req: { connection: { remoteAddress: any; }; }, res: { writeHead: (arg0: number, arg1: { 'Content-Type': string; }) => void; write: (arg0: any) => any; end: () => void; }) {
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            logger.debug(res.write(req.connection.remoteAddress));
+            res.end();
+        });
+        this.server = this.create_server.listen(this.port, function () {
             console.log('listening on port: ' + mask);
         });
         // https://expressjs.com/ja/starter/static-files.html

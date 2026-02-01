@@ -2,9 +2,8 @@
 .idea/*
 
 # Ignore Node.js dependency
-/node_modules/*
+node_modules/*
 package-lock.json
 
 # Ignore ./logs/
-clientip.txt
 来客.xlsx

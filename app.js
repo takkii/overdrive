@@ -75,26 +75,27 @@ var Env = /** @class */ (function () {
             var target = '';
             // Warning, do not access multiple times.
             if ("".concat(ipAddress) == '161.132.68.104') {
-                target = './index.html';
+                res.render("error");
+                return;
             }
             else if ("".concat(ipAddress) == '185.16.39.146') {
-                target = './index.html';
+                res.render("error");
                 return;
             }
             else if ("".concat(ipAddress) == '158.158.35.58') {
-                target = './index.html';
+                res.render("error");
                 return;
             }
             else if ("".concat(ipAddress) == '143.64.150.164') {
-                target = './index.html';
+                res.render("error");
                 return;
             }
             else if ("".concat(ipAddress) == '78.153.140.224') {
-                target = './index.html';
+                res.render("error");
                 return;
             }
             else if ("".concat(ipAddress) == '193.142.147.209') {
-                target = './index.html';
+                res.render("error");
                 return;
             }
             logger.debug("Client IP: ".concat(ipAddress));

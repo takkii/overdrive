@@ -72,7 +72,6 @@ var Env = /** @class */ (function () {
             var clientIP = req.ip;
             var splittedAddress = "".concat(clientIP).split(':');
             var ipAddress = splittedAddress[splittedAddress.length - 1];
-            var target = '';
             // Warning, do not access multiple times.
             if ("".concat(ipAddress) == '161.132.68.104') {
                 res.render("error");

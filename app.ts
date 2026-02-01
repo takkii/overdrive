@@ -26,8 +26,7 @@ class Env {
         this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
         this.app.use(this.express.static('public'))
         this.app.set('view engine', 'ejs');
-        // @ts-ignore
-        this.app.use((req, res, next) => {
+        this.app.use((req: { ip: any; }, res: any, next: () => void) => {
             log4js.configure({
                 appenders: {
                     overdrive: {
@@ -45,8 +44,28 @@ class Env {
             const clientIP = req.ip;
             const splittedAddress = `${clientIP}`.split(':');
             const ipAddress = splittedAddress[splittedAddress.length - 1];
+            let target = '';
 
-            // @ts-ignore
+            // Warning, do not access multiple times.
+            if (`${ipAddress}` == '161.132.68.104') {
+                target = './index.html';
+            } else if (`${ipAddress}` == '185.16.39.146') {
+                target = './index.html';
+                return;
+            } else if (`${ipAddress}` == '158.158.35.58') {
+                target = './index.html';
+                return;
+            } else if (`${ipAddress}` == '143.64.150.164') {
+                target = './index.html';
+                return;
+            } else if (`${ipAddress}` == '78.153.140.224') {
+                target = './index.html';
+                return;
+            } else if (`${ipAddress}` == '193.142.147.209') {
+                target = './index.html';
+                return;
+            }
+
             logger.debug(`Client IP: ${ipAddress}`);
             next();
         });

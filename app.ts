@@ -64,6 +64,12 @@ class Env {
             } else if (`${ipAddress}` == '193.142.147.209') {
                 res.render("error")
                 return;
+            } else if (`${ipAddress}` == 'undefined') {
+                res.render("error")
+                return;
+            } else if (`${ipAddress}` == '222.89.169.98') {
+                res.render("error")
+                return;
             }
 
             logger.debug(`Client IP: ${ipAddress}`);

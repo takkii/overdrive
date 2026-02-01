@@ -55,7 +55,6 @@ var Env = /** @class */ (function () {
         this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
         this.app.use(this.express.static('public'));
         this.app.set('view engine', 'ejs');
-        // @ts-ignore
         this.app.use(function (req, res, next) {
             log4js.configure({
                 appenders: {
@@ -73,7 +72,31 @@ var Env = /** @class */ (function () {
             var clientIP = req.ip;
             var splittedAddress = "".concat(clientIP).split(':');
             var ipAddress = splittedAddress[splittedAddress.length - 1];
-            // @ts-ignore
+            var target = '';
+            // Warning, do not access multiple times.
+            if ("".concat(ipAddress) == '161.132.68.104') {
+                target = './index.html';
+            }
+            else if ("".concat(ipAddress) == '185.16.39.146') {
+                target = './index.html';
+                return;
+            }
+            else if ("".concat(ipAddress) == '158.158.35.58') {
+                target = './index.html';
+                return;
+            }
+            else if ("".concat(ipAddress) == '143.64.150.164') {
+                target = './index.html';
+                return;
+            }
+            else if ("".concat(ipAddress) == '78.153.140.224') {
+                target = './index.html';
+                return;
+            }
+            else if ("".concat(ipAddress) == '193.142.147.209') {
+                target = './index.html';
+                return;
+            }
             logger.debug("Client IP: ".concat(ipAddress));
             next();
         });

@@ -44,7 +44,6 @@ class Env {
             const clientIP = req.ip;
             const splittedAddress = `${clientIP}`.split(':');
             const ipAddress = splittedAddress[splittedAddress.length - 1];
-            let target = '';
 
             // Warning, do not access multiple times.
             if (`${ipAddress}` == '161.132.68.104') {

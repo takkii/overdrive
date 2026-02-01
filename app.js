@@ -97,6 +97,14 @@ var Env = /** @class */ (function () {
                 res.render("error");
                 return;
             }
+            else if ("".concat(ipAddress) == 'undefined') {
+                res.render("error");
+                return;
+            }
+            else if ("".concat(ipAddress) == '222.89.169.98') {
+                res.render("error");
+                return;
+            }
             logger.debug("Client IP: ".concat(ipAddress));
             next();
         });

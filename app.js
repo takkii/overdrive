@@ -68,8 +68,8 @@ var Env = /** @class */ (function () {
             });
             var logger = log4js.getLogger();
             logger.level = "debug";
-            // const clientIP = req.connection.remoteAddress;
-            var clientIP = req.ip;
+            // @ts-ignore
+            var clientIP = req.ip || req.connection.remoteAddress;
             var splittedAddress = "".concat(clientIP).split(':');
             var ipAddress = splittedAddress[splittedAddress.length - 1];
             // Warning, do not access multiple times.

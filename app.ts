@@ -40,8 +40,8 @@ class Env {
             const logger = log4js.getLogger();
             logger.level = "debug";
 
-            // const clientIP = req.connection.remoteAddress;
-            const clientIP = req.ip;
+            // @ts-ignore
+            const clientIP = req.ip || req.connection.remoteAddress;
             const splittedAddress = `${clientIP}`.split(':');
             const ipAddress = splittedAddress[splittedAddress.length - 1];
 

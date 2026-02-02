@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import * as log4js from "log4js";
+import {existsSync, readFileSync} from 'node:fs';
 
 class Env {
     express: any;
@@ -45,31 +46,47 @@ class Env {
             const splittedAddress = `${clientIP}`.split(':');
             const ipAddress = splittedAddress[splittedAddress.length - 1];
 
-            // Warning, do not access multiple times.
-            if (`${ipAddress}` == '161.132.68.104') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '185.16.39.146') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '158.158.35.58') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '143.64.150.164') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '78.153.140.224') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '193.142.147.209') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == 'undefined') {
-                res.render("error")
-                return;
-            } else if (`${ipAddress}` == '222.89.169.98') {
-                res.render("error")
-                return;
+            const json_data = './logs/blacklist.json'
+
+            if (existsSync(`${json_data}`)) {
+                const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
+
+                if (`${ipAddress}` == data["1"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["2"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["3"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["4"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["5"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["6"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["7"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["8"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["9"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["10"]) {
+                    res.render("error")
+                    return;
+                } else if (`${ipAddress}` == data["11"]) {
+                    res.render("error")
+                    return;
+                }
+            } else {
+                console.log('File Not Found ' + `${json_data}`);
             }
 
             logger.debug(`Client IP: ${ipAddress}`);

@@ -69,63 +69,121 @@ var Env = /** @class */ (function () {
             });
             var logger = log4js.getLogger();
             logger.level = "debug";
-            // @ts-ignore
-            var clientIP = req.ip || req.connection.remoteAddress;
-            var splittedAddress = "".concat(clientIP).split(':');
-            var ipAddress = splittedAddress[splittedAddress.length - 1];
-            var json_data = './logs/blacklist.json';
-            if ((0, node_fs_1.existsSync)("".concat(json_data))) {
-                var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
-                if ("".concat(ipAddress) == data["1"]) {
-                    res.render("error");
-                    return;
+            if (req.ip == "undefined") {
+                // @ts-ignore
+                var ipAddress = "".concat(req.connection.remoteAddress);
+                var json_data = './logs/blacklist.json';
+                if ((0, node_fs_1.existsSync)("".concat(json_data))) {
+                    var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
+                    if ("".concat(ipAddress) == data["1"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["2"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["3"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["4"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["5"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["6"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["7"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["8"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["9"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["10"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["11"]) {
+                        res.render("error");
+                        return;
+                    }
                 }
-                else if ("".concat(ipAddress) == data["2"]) {
-                    res.render("error");
-                    return;
+                else {
+                    console.log('File Not Found ' + "".concat(json_data));
                 }
-                else if ("".concat(ipAddress) == data["3"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["4"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["5"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["6"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["7"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["8"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["9"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["10"]) {
-                    res.render("error");
-                    return;
-                }
-                else if ("".concat(ipAddress) == data["11"]) {
-                    res.render("error");
-                    return;
-                }
+                logger.debug("Client IP: ".concat(ipAddress));
+                next();
             }
             else {
-                console.log('File Not Found ' + "".concat(json_data));
+                var clientIP = req.ip;
+                var splittedAddress = "".concat(clientIP).split(':');
+                var ipAddress = splittedAddress[splittedAddress.length - 1];
+                var json_data = './logs/blacklist.json';
+                if ((0, node_fs_1.existsSync)("".concat(json_data))) {
+                    var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
+                    if ("".concat(ipAddress) == data["1"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["2"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["3"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["4"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["5"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["6"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["7"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["8"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["9"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["10"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["11"]) {
+                        res.render("error");
+                        return;
+                    }
+                }
+                else {
+                    console.log('File Not Found ' + "".concat(json_data));
+                }
+                logger.debug("Client IP: ".concat(ipAddress));
+                next();
             }
-            logger.debug("Client IP: ".concat(ipAddress));
-            next();
         });
     }
     Env.prototype.run = function () {

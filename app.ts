@@ -41,56 +41,108 @@ class Env {
             const logger = log4js.getLogger();
             logger.level = "debug";
 
-            // @ts-ignore
-            const clientIP = req.ip || req.connection.remoteAddress;
-            const splittedAddress = `${clientIP}`.split(':');
-            const ipAddress = splittedAddress[splittedAddress.length - 1];
+            if (req.ip == "undefined") {
+                // @ts-ignore
+                const ipAddress = `${req.connection.remoteAddress}`
 
-            const json_data = './logs/blacklist.json'
+                const json_data = './logs/blacklist.json'
 
-            if (existsSync(`${json_data}`)) {
-                const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
+                if (existsSync(`${json_data}`)) {
+                    const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
 
-                if (`${ipAddress}` == data["1"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["2"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["3"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["4"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["5"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["6"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["7"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["8"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["9"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["10"]) {
-                    res.render("error")
-                    return;
-                } else if (`${ipAddress}` == data["11"]) {
-                    res.render("error")
-                    return;
+                    if (`${ipAddress}` == data["1"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["2"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["3"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["4"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["5"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["6"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["7"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["8"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["9"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["10"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["11"]) {
+                        res.render("error")
+                        return;
+                    }
+                } else {
+                    console.log('File Not Found ' + `${json_data}`);
                 }
-            } else {
-                console.log('File Not Found ' + `${json_data}`);
-            }
 
-            logger.debug(`Client IP: ${ipAddress}`);
-            next();
+                logger.debug(`Client IP: ${ipAddress}`);
+                next();
+
+            } else {
+                const clientIP = req.ip;
+                const splittedAddress = `${clientIP}`.split(':');
+                const ipAddress = splittedAddress[splittedAddress.length - 1];
+
+                const json_data = './logs/blacklist.json'
+
+                if (existsSync(`${json_data}`)) {
+                    const data = JSON.parse(readFileSync(`${json_data}`, 'utf8'));
+
+                    if (`${ipAddress}` == data["1"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["2"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["3"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["4"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["5"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["6"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["7"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["8"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["9"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["10"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["11"]) {
+                        res.render("error")
+                        return;
+                    }
+                } else {
+                    console.log('File Not Found ' + `${json_data}`);
+                }
+
+                logger.debug(`Client IP: ${ipAddress}`);
+                next();
+
+            }
         });
     }
 

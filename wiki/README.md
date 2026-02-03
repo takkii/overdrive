@@ -43,15 +43,16 @@ forever start app.js 80
 forever stop app.js
 ```
 
-##### ※ 単語があるかないか検索🔎→あるとき、画面上部に移動します。ないとき、「見つかりませんでした。」が表示されます。
+##### ※ 単語があるかないか検索🔎→⭕️ヒット、画面上部に移動します。
 
-※ Windows/Linuxカーネルのみ対応です。起動時に環境のチェックが入ります。
+##### ❎️None、「見つかりませんでした。」が表示されます。
+
+※ Windows/Linuxカーネルのみ対応です。それ以外、起動時に環境のチェックが入り0.0.0.0が指定されます。
 
 > yarn licenses list
 
 ```javascript
 yarn licenses v1.22.22
-warning ..\..\package.json: No license field
 ├─ Apache-2.0
 │  ├─ ejs@4.0.1
 │  │  ├─ URL: git://github.com/mde/ejs.git
@@ -65,6 +66,9 @@ warning ..\..\package.json: No license field
 │  │  ├─ URL: git://github.com/jakejs/jake.git
 │  │  ├─ VendorName: Matthew Eernisse
 │  │  └─ VendorUrl: http://fleegix.org
+│  ├─ log4js@6.9.1
+│  │  ├─ URL: https://github.com/log4js-node/log4js-node.git
+│  │  └─ VendorUrl: https://log4js-node.github.io/log4js-node/
 │  └─ npm-check-updates@19.3.2
 │     ├─ URL: git+https://github.com/raineorshine/npm-check-updates.git
 │     ├─ VendorName: Tomas Junnonen
@@ -74,6 +78,12 @@ warning ..\..\package.json: No license field
 │     ├─ URL: https://github.com/ljharb/qs.git
 │     └─ VendorUrl: https://github.com/ljharb/qs
 ├─ ISC
+│  ├─ flatted@3.3.3
+│  │  ├─ URL: git+https://github.com/WebReflection/flatted.git
+│  │  ├─ VendorName: Andrea Giammarchi
+│  │  └─ VendorUrl: https://github.com/WebReflection/flatted#readme
+│  ├─ graceful-fs@4.2.11
+│  │  └─ URL: https://github.com/isaacs/node-graceful-fs
 │  ├─ inherits@2.0.4
 │  │  └─ URL: git://github.com/isaacs/inherits
 │  ├─ minimatch@5.1.6
@@ -114,7 +124,7 @@ warning ..\..\package.json: No license field
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.1.0
+   ├─ @types/node@25.2.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -177,6 +187,9 @@ warning ..\..\package.json: No license field
    │  ├─ URL: git://github.com/TooTallNate/node-data-uri-to-buffer.git
    │  ├─ VendorName: Nathan Rajlich
    │  └─ VendorUrl: https://github.com/TooTallNate/node-data-uri-to-buffer
+   ├─ date-format@4.0.14
+   │  ├─ URL: https://github.com/nomiddlename/date-format.git
+   │  └─ VendorName: Gareth Jones
    ├─ debug@4.4.3
    │  ├─ URL: git://github.com/debug-js/debug.git
    │  ├─ VendorName: Josh Junon
@@ -235,6 +248,10 @@ warning ..\..\package.json: No license field
    │  ├─ URL: https://github.com/jshttp/fresh.git
    │  ├─ VendorName: TJ Holowaychuk
    │  └─ VendorUrl: http://tjholowaychuk.com
+   ├─ fs-extra@8.1.0
+   │  ├─ URL: https://github.com/jprichardson/node-fs-extra
+   │  ├─ VendorName: JP Richardson
+   │  └─ VendorUrl: https://github.com/jprichardson/node-fs-extra
    ├─ function-bind@1.1.2
    │  ├─ URL: https://github.com/Raynos/function-bind.git
    │  ├─ VendorName: Raynos
@@ -273,10 +290,13 @@ warning ..\..\package.json: No license field
    ├─ is-promise@4.0.0
    │  ├─ URL: https://github.com/then/is-promise.git
    │  └─ VendorName: ForbesLindesay
-   ├─ jn-server@1.0.3
+   ├─ jn-server@1.0.4
    │  ├─ URL: https://github.com/takkii/json-server.git
    │  ├─ VendorName: Takayuki Kamiyama
    │  └─ VendorUrl: http://pieceof.shop/
+   ├─ jsonfile@4.0.0
+   │  ├─ URL: git@github.com:jprichardson/node-jsonfile.git
+   │  └─ VendorName: JP Richardson
    ├─ math-intrinsics@1.1.0
    │  ├─ URL: git+https://github.com/es-shims/math-intrinsics.git
    │  ├─ VendorName: Jordan Harband
@@ -323,6 +343,10 @@ warning ..\..\package.json: No license field
    │  ├─ URL: https://github.com/stream-utils/raw-body.git
    │  ├─ VendorName: Jonathan Ong
    │  └─ VendorUrl: http://jongleberry.com
+   ├─ rfdc@1.4.1
+   │  ├─ URL: git+https://github.com/davidmarkclements/rfdc.git
+   │  ├─ VendorName: David Mark Clements
+   │  └─ VendorUrl: https://github.com/davidmarkclements/rfdc#readme
    ├─ router@2.2.0
    │  ├─ URL: https://github.com/pillarjs/router.git
    │  └─ VendorName: Douglas Christopher Wilson
@@ -361,6 +385,9 @@ warning ..\..\package.json: No license field
    │  └─ VendorUrl: https://github.com/ljharb/side-channel#readme
    ├─ statuses@2.0.2
    │  └─ URL: https://github.com/jshttp/statuses.git
+   ├─ streamroller@3.1.5
+   │  ├─ URL: https://github.com/log4js-node/streamroller.git
+   │  └─ VendorName: Gareth Jones
    ├─ toidentifier@1.0.1
    │  ├─ URL: https://github.com/component/toidentifier.git
    │  └─ VendorName: Douglas Christopher Wilson
@@ -369,6 +396,10 @@ warning ..\..\package.json: No license field
    ├─ undici-types@7.16.0
    │  ├─ URL: git+https://github.com/nodejs/undici.git
    │  └─ VendorUrl: https://undici.nodejs.org/
+   ├─ universalify@0.1.2
+   │  ├─ URL: git+https://github.com/RyanZim/universalify.git
+   │  ├─ VendorName: Ryan Zimmerman
+   │  └─ VendorUrl: https://github.com/RyanZim/universalify#readme
    ├─ unpipe@1.0.0
    │  ├─ URL: https://github.com/stream-utils/unpipe.git
    │  └─ VendorName: Douglas Christopher Wilson
@@ -379,7 +410,7 @@ warning ..\..\package.json: No license field
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.29s.
+Done in 0.37s
 ```
 
-> ChangeLogs: 2026/01/28
+> ChangeLogs: 2026/02/04

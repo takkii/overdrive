@@ -69,10 +69,10 @@ var Env = /** @class */ (function () {
             });
             var logger = log4js.getLogger();
             logger.level = "debug";
-            if (req.ip == "undefined") {
+            if ("".concat(req.ip) == "undefined") {
                 // @ts-ignore
                 var ipAddress = "".concat(req.connection.remoteAddress);
-                var json_data = './logs/blacklist.json';
+                var json_data = './logs/blacklist_v6.json';
                 if ((0, node_fs_1.existsSync)("".concat(json_data))) {
                     var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
                     if ("".concat(ipAddress) == data["1"]) {
@@ -80,42 +80,6 @@ var Env = /** @class */ (function () {
                         return;
                     }
                     else if ("".concat(ipAddress) == data["2"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["3"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["4"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["5"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["6"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["7"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["8"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["9"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["10"]) {
-                        res.render("error");
-                        return;
-                    }
-                    else if ("".concat(ipAddress) == data["11"]) {
                         res.render("error");
                         return;
                     }
@@ -130,7 +94,7 @@ var Env = /** @class */ (function () {
                 var clientIP = req.ip;
                 var splittedAddress = "".concat(clientIP).split(':');
                 var ipAddress = splittedAddress[splittedAddress.length - 1];
-                var json_data = './logs/blacklist.json';
+                var json_data = './logs/blacklist_v4.json';
                 if ((0, node_fs_1.existsSync)("".concat(json_data))) {
                     var data = JSON.parse((0, node_fs_1.readFileSync)("".concat(json_data), 'utf8'));
                     if ("".concat(ipAddress) == data["1"]) {

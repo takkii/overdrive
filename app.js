@@ -141,6 +141,34 @@ var Env = /** @class */ (function () {
                         res.render("error");
                         return;
                     }
+                    else if ("".concat(ipAddress) == data["12"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["13"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["14"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["15"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["16"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["17"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["18"]) {
+                        res.render("error");
+                        return;
+                    }
                 }
                 else {
                     console.log('File Not Found ' + "".concat(json_data));

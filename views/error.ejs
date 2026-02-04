@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>The page you were looking for doesn't exist (404)</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -63,5 +62,11 @@
     </div>
     <p>If you are the application owner check the logs for more information.</p>
 </div>
+<script>
+    navigator.geolocation.getCurrentPosition(function(pos){
+        const latitude = pos.coords.latitude;
+        const longitude = pos.coords.longitude;
+        alert("Your position: " + latitude + ", " + longitude);
+    });
+</script>
 </body>
-</html>

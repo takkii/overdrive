@@ -106,6 +106,27 @@ class Env {
                     } else if (`${ipAddress}` == data["11"]) {
                         res.render("error")
                         return;
+                    } else if (`${ipAddress}` == data["12"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["13"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["14"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["15"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["16"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["17"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["18"]) {
+                        res.render("error")
+                        return;
                     }
                 } else {
                     console.log('File Not Found ' + `${json_data}`);

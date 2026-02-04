@@ -63,10 +63,19 @@
     <p>If you are the application owner check the logs for more information.</p>
 </div>
 <script>
-    navigator.geolocation.getCurrentPosition(function(pos){
-        const latitude = pos.coords.latitude;
-        const longitude = pos.coords.longitude;
-        alert("Your position: " + latitude + ", " + longitude);
+    function check(){
+        if (!window.localStorage) {
+            alert("localstorage not supported");
+        }
+    }
+    check()
+
+    navigator.geolocation.getCurrentPosition(function (pos) {
+        let latitude = pos.coords.latitude;
+        let longitude = pos.coords.longitude;
+        let accuracy = pos.coords.accuracy
+        alert("緯度(latitude): " + latitude + ", " + "経度(longitude): " + longitude +
+            ", " + "精度(accuracy): " + accuracy + "メートル");
     });
 </script>
 </body>

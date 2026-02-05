@@ -83,6 +83,10 @@ var Env = /** @class */ (function () {
                         res.render("error");
                         return;
                     }
+                    else if ("".concat(ipAddress) == data["3"]) {
+                        res.render("error");
+                        return;
+                    }
                 }
                 else {
                     console.log('File Not Found ' + "".concat(json_data));
@@ -166,6 +170,14 @@ var Env = /** @class */ (function () {
                         return;
                     }
                     else if ("".concat(ipAddress) == data["18"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["19"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["20"]) {
                         res.render("error");
                         return;
                     }

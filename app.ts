@@ -136,6 +136,18 @@ class Env {
                     } else if (`${ipAddress}` == data["20"]) {
                         res.render("error")
                         return;
+                    } else if (`${ipAddress}` == data["21"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["22"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["23"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["24"]) {
+                        res.render("error")
+                        return;
                     }
                 } else {
                     console.log('File Not Found ' + `${json_data}`);

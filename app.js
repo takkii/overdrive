@@ -181,6 +181,22 @@ var Env = /** @class */ (function () {
                         res.render("error");
                         return;
                     }
+                    else if ("".concat(ipAddress) == data["21"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["22"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["23"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["24"]) {
+                        res.render("error");
+                        return;
+                    }
                 }
                 else {
                     console.log('File Not Found ' + "".concat(json_data));

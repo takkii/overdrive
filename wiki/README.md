@@ -124,7 +124,7 @@ yarn licenses v1.22.22
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.2.0
+   ├─ @types/node@25.2.1
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -410,7 +410,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.37s
+Done in 0.37s.
 ```
 
-> ChangeLogs: 2026/02/04
+> ChangeLogs: 2026/02/07

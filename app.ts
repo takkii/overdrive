@@ -58,6 +58,9 @@ class Env {
                     } else if (`${ipAddress}` == data["3"]) {
                         res.render("error")
                         return;
+                    } else if (`${ipAddress}` == data["4"]) {
+                        res.render("error")
+                        return;
                     }
 
                 } else {
@@ -146,6 +149,12 @@ class Env {
                         res.render("error")
                         return;
                     } else if (`${ipAddress}` == data["24"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["25"]) {
+                        res.render("error")
+                        return;
+                    } else if (`${ipAddress}` == data["26"]) {
                         res.render("error")
                         return;
                     }

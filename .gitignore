@@ -7,3 +7,7 @@ package-lock.json
 
 # Ignore ./logs/
 来客.xlsx
+
+# Ignore
+/json/toss.js.map
+app.js.map

@@ -37,24 +37,29 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_fetch_1 = require("node-fetch");
-var log4js = require("log4js");
 var node_fs_1 = require("node:fs");
+var log4js = require("log4js");
 var Env = /** @class */ (function () {
     function Env() {
         // https://expressjs.com/ja/5x/api.html
-        this.express = require('express');
-        this.favicon = require('serve-favicon');
-        this.path = require('path');
-        this.app = this.express();
+        var express = require('express');
+        var favicon = require('serve-favicon');
+        var path = require('path');
+        this.app = express();
         var mask = process.argv[2];
-        this.port = process.env.PORT || mask;
-        this.server = this.app.listen(this.port, function () {
-            console.log('listening on port: ' + mask);
+        var port = process.env.PORT || mask;
+        this.server = this.app.listen(port, function () {
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    console.log('listening on port: ' + mask);
+                    return [2 /*return*/];
+                });
+            });
         });
         // https://expressjs.com/ja/starter/static-files.html
-        this.app.use(this.favicon(this.path.join(__dirname, 'public', 'favicon.ico')));
-        this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
-        this.app.use(this.express.static('public'));
+        this.app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+        this.app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+        this.app.use(express.static('public'));
         this.app.set('view engine', 'ejs');
         this.app.use(function (req, res, next) {
             log4js.configure({
@@ -70,7 +75,6 @@ var Env = /** @class */ (function () {
             var logger = log4js.getLogger();
             logger.level = "debug";
             if ("".concat(req.ip) == "undefined") {
-                // @ts-ignore
                 var ipAddress = "".concat(req.connection.remoteAddress);
                 var json_data = './logs/blacklist_v6.json';
                 if ((0, node_fs_1.existsSync)("".concat(json_data))) {

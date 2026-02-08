@@ -1,33 +1,30 @@
 import fetch from 'node-fetch';
-import * as log4js from "log4js";
 import {existsSync, readFileSync} from 'node:fs';
+import * as log4js from 'log4js';
 
 class Env {
-    express: any;
     app: any;
     server: any;
-    port: any;
-    favicon: any;
-    path: any;
-    create_server: any;
 
     constructor() {
         // https://expressjs.com/ja/5x/api.html
-        this.express = require('express');
-        this.favicon = require('serve-favicon')
-        this.path = require('path')
-        this.app = this.express();
+        const express = require('express');
+        const favicon = require('serve-favicon')
+        const path = require('path')
+        this.app = express();
         const mask = process.argv[2]
-        this.port = process.env.PORT || mask;
-        this.server = this.app.listen(this.port, function () {
+        const port = process.env.PORT || mask;
+        this.server = this.app.listen(port, async function () {
             console.log('listening on port: ' + mask);
         });
         // https://expressjs.com/ja/starter/static-files.html
-        this.app.use(this.favicon(this.path.join(__dirname, 'public', 'favicon.ico')))
-        this.app.use('/bootstrap', this.express.static(this.path.join(__dirname, 'node_modules/bootstrap/dist')));
-        this.app.use(this.express.static('public'))
+        this.app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+        this.app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+        this.app.use(express.static('public'))
         this.app.set('view engine', 'ejs');
-        this.app.use((req: { ip: any; }, res: any, next: () => void) => {
+        this.app.use((req: {
+            [x: string]: any; ip: any;
+        }, res: any, next: () => void) => {
             log4js.configure({
                 appenders: {
                     overdrive: {
@@ -42,7 +39,6 @@ class Env {
             logger.level = "debug";
 
             if (`${req.ip}` == "undefined") {
-                // @ts-ignore
                 const ipAddress = `${req.connection.remoteAddress}`
                 const json_data = './logs/blacklist_v6.json'
 

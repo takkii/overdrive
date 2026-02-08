@@ -213,6 +213,26 @@ var Env = /** @class */ (function () {
                         res.render("error");
                         return;
                     }
+                    else if ("".concat(ipAddress) == data["27"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["28"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["29"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["30"]) {
+                        res.render("error");
+                        return;
+                    }
+                    else if ("".concat(ipAddress) == data["31"]) {
+                        res.render("error");
+                        return;
+                    }
                 }
                 else {
                     console.log('File Not Found ' + "".concat(json_data));

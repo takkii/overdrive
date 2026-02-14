@@ -74,7 +74,7 @@ yarn licenses v1.22.22
 │     ├─ VendorName: Tomas Junnonen
 │     └─ VendorUrl: https://github.com/raineorshine/npm-check-updates
 ├─ BSD-3-Clause
-│  └─ qs@6.14.1
+│  └─ qs@6.14.2
 │     ├─ URL: https://github.com/ljharb/qs.git
 │     └─ VendorUrl: https://github.com/ljharb/qs
 ├─ ISC
@@ -124,7 +124,7 @@ yarn licenses v1.22.22
    ├─ @types/http-errors@2.0.5
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/http-errors
-   ├─ @types/node@25.2.1
+   ├─ @types/node@25.2.3
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
    ├─ @types/qs@6.14.0
@@ -136,6 +136,9 @@ yarn licenses v1.22.22
    ├─ @types/send@1.2.1
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/send
+   ├─ @types/serve-favicon@2.5.7
+   │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+   │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/serve-favicon
    ├─ @types/serve-static@2.2.0
    │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
    │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/serve-static
@@ -410,7 +413,7 @@ yarn licenses v1.22.22
       ├─ URL: git+https://github.com/MattiasBuelens/web-streams-polyfill.git
       ├─ VendorName: Mattias Buelens
       └─ VendorUrl: https://github.com/MattiasBuelens/web-streams-polyfill#readme
-Done in 0.37s.
+Done in 0.56s.
 ```
 
-> ChangeLogs: 2026/02/07
+> ChangeLogs: 2026/02/15
